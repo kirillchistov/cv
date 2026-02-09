@@ -636,6 +636,15 @@ body.app {
   box-shadow: 0 10px 25px rgba(15, 23, 42, 0.2);
 }
 
+/* Full-width projects row (below two-column layout) */
+.projects-row {
+  margin-top: 1.75rem;
+}
+
+.projects-card {
+  width: 100%;
+}
+
 /* на маленьком экране фото центрируем */
 @media (max-width: 640px) {
   .hero-photo-wrap {
