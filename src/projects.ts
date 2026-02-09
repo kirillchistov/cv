@@ -35,7 +35,13 @@ export const projects: Project[] = [
     stack: ['HTML', 'CSS', 'JS', 'Vite'],
     url: 'https://kirillchistov.github.io/ai-strategyst/',
   },
-
+  {
+    name: 'SaaS OSA Tool',
+    description:
+      'Landing page and demo for a SaaS martech OSA Tool.',
+    stack: ['HTML', 'CSS', 'TypeScript', 'Cursor', 'Vite'],
+    url: 'https://kirillchistov.github.io/stindex-demo/',
+  },
   {
     name: 'SaaS Product Landing',
     description:
@@ -50,7 +56,6 @@ export const projects: Project[] = [
     stack: ['React', 'NextJS', 'Redux', 'Vite'],
     url: 'https://github.com/kirillchistov/learn-js-react/tree/main/vite-react',
   },
-  
   {
     name: 'The stellar burger shop',
     description:
