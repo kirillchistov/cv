@@ -11,15 +11,15 @@ export const projects: Project[] = [
   {
     name: 'Marketing Mix Model Builder',
     description:
-      'Playing around with eGrocery dashboard for rapid competitive intel and brand digital shelf healthchecks.',
-    stack: ['Next.js 15', 'React 19', 'Tailwind CSS v4', 'Drizzle'],
-    url: 'https://github.com/kirillchistov/growcery-admin',
+      'Demo marketing mix modeling tools for digital and small businesses.',
+    stack: ['HTML', 'CSS', 'JS', 'Vite', 'Cursor'],
+    url: 'https://github.com/kirillchistov/marketingmixer',
   },
   {
     name: 'eGrocery Dashboard',
     description:
       'Playing around with eGrocery dashboard for rapid competitive intel and brand digital shelf healthchecks.',
-    stack: ['Next.js 15', 'React 19', 'Tailwind CSS v4', 'Drizzle'],
+    stack: ['HTML', 'CSS', 'JS', 'Vite'],
     url: 'https://github.com/kirillchistov/growcery-admin',
   },
   {
@@ -35,7 +35,13 @@ export const projects: Project[] = [
     stack: ['HTML', 'CSS', 'JS', 'Vite'],
     url: 'https://kirillchistov.github.io/ai-strategyst/',
   },
-
+  {
+    name: 'SaaS OSA Tool',
+    description:
+      'Landing page and demo for a SaaS martech OSA Tool.',
+    stack: ['HTML', 'CSS', 'TypeScript', 'Cursor', 'Vite'],
+    url: 'https://kirillchistov.github.io/stindex-demo/',
+  },
   {
     name: 'SaaS Product Landing',
     description:
@@ -50,7 +56,6 @@ export const projects: Project[] = [
     stack: ['React', 'NextJS', 'Redux', 'Vite'],
     url: 'https://github.com/kirillchistov/learn-js-react/tree/main/vite-react',
   },
-  
   {
     name: 'The stellar burger shop',
     description:
