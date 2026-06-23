@@ -13,7 +13,7 @@ export const projects: Project[] = [
     description:
       'Demo marketing mix modeling tools for digital and small businesses.',
     stack: ['HTML', 'CSS', 'JS', 'Vite', 'Cursor'],
-    url: 'https://github.com/kirillchistov/marketingmixer',
+    url: 'https://kirillchistov.github.io/marketingmixer/',
   },
   {
     name: 'eGrocery Dashboard',
