@@ -6,7 +6,7 @@ export const projects: Project[] = [
     description:
       'Experiments with SaaS dashboards: martech product marketplace analytics and ROMI boosting.',
     stack: ['Next.js 15', 'TypeScript', 'Tailwind CSS v4', 'Shadcn UI'],
-    url: 'https://github.com/kirillchistov/next-admin-dash',
+    url: 'https://kirillchistov.github.io/next-admin-dash/prismb/',
   },
   {
     name: 'Marketing Mix Model Builder',
@@ -26,8 +26,15 @@ export const projects: Project[] = [
     name: 'NextJS Ecommerce Project',
     description: 'Experiments with NextJS 15 and tennis racket e-shop.',
     stack: ['Next.js 15', 'TypeScript', 'Tailwind CSS v4'],
-    url: 'https://github.com/kirillchistov/nextjs-20250606',
+    url: 'https://kirillchistov.github.io/nextjs-20250606/',
   },
+  {
+    name: 'Smart Chat App',
+    description:
+      'Responsive AI-driven chat app as part of middle frontend developer course.',
+    stack: ['TypeScript', 'PostCSS', 'Vite', 'Netlify', 'Vitest', 'Jest', 'WebSocket'],
+    url: 'https://kirillchistov.github.io/middle.messenger.praktikum.yandex/',
+  },  
   {
     name: 'AI Product Landing',
     description:
@@ -54,34 +61,34 @@ export const projects: Project[] = [
     description:
       'Front-end training app for a restaurant navigation service.',
     stack: ['React', 'NextJS', 'Redux', 'Vite'],
-    url: 'https://github.com/kirillchistov/learn-js-react/tree/main/vite-react',
+    url: 'https://kirillchistov.github.io/learn-js-react/',
   },
   {
     name: 'The stellar burger shop',
     description:
       'Full-stack training app for a burger shop at the corner of the gallaxy.',
     stack: ['HTML', 'CSS', 'React', 'Figma', 'TypeScript', 'Node.js', 'MongoDB', 'Express', 'Nginx', 'Redux', 'Cypress', 'Jest'],
-    url: 'https://github.com/kirillchistov/react-burger',
+    url: 'https://kirillchistov.github.io/react-burger/',
   },
   {
     name: 'The movie explorer site',
     description:
       'Full-stack training app for movie explorers.',
     stack: ['HTML', 'CSS', 'React', 'Node.js', 'MongoDB', 'Express', 'Nginx', 'Git', 'Webpack', 'Babel'],
-    url: 'https://github.com/kirillchistov/movies-explorer-frontend',
+    url: 'https://kirillchistov.github.io/movies-explorer-frontend/',
   },
   {
     name: 'The place to socialize',
     description:
       'Single‑page app for sharing pleasant travel photos and explore the yet unseen.',
     stack: ['HTML', 'CSS', 'JavaScript', 'Figma'],
-    url: 'https://github.com/kirillchistov/mesto',
+    url: 'https://kirillchistov.github.io/mesto/',
   },
   {
     name: 'Russian Travel',
     description:
       'Responsive landing page dedicated to travelling around Russia. First take on Web development.',
     stack: ['HTML', 'CSS', 'Adaptive / Responsive'],
-    url: 'https://github.com/kirillchistov/russian-travel',
+    url: 'https://kirillchistov.github.io/russian-travel/',
   },
 ];
