@@ -10,3 +10,12 @@ kirillchistov/kirillchistov is a ✨ special ✨ repository because its `README.
 You can click the Preview link to take a look at your changes.
 --->
 - [short bio in Russian](https://www.notion.so/iroiru/350222a6897e4eb888bd5c8e1b09408c)
+
+## Solo martech founder roadmap
+
+`roadmap.html` is a second Vite entry: an interactive roadmap from CMO / Head of Growth to a one-person martech company.
+It reuses the CV theme, tokens and `src/projects.ts`; content lives in `src/roadmap/data.ts` (skills, stages, bets, CV integrations).
+Progress, skill estimates and bet scores are saved in `localStorage` only.
+
+- Dev: `pnpm dev` → http://localhost:5173/cv/roadmap.html
+- Build: `pnpm build` emits both `index.html` and `roadmap.html`

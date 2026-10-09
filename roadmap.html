@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <title>Solo MarTech Founder Roadmap · Kirill Chistov</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Interactive step-by-step roadmap from CMO / Head of Growth to a one-person martech company: skills, stages, first bets and how the CV evolves along the way." />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body class="app">
+  <div class="page">
+    <header class="topbar">
+      <div class="page-inner topbar-inner">
+        <a class="topbar-left rm-home" href="./">
+          <div class="avatar">КЧ</div>
+          <div class="topbar-text">
+            <div class="topbar-role">Solo founder roadmap</div>
+            <div class="topbar-industry">MarTech · built on the CV</div>
+          </div>
+        </a>
+        <div class="topbar-right rm-topbar-right">
+          <div class="theme-toggle" aria-label="Theme">
+            <button type="button" id="lightThemeBtn" class="theme-btn theme-btn-active" title="Light theme">☀</button>
+            <button type="button" id="darkThemeBtn" class="theme-btn" title="Dark theme">🌙</button>
+          </div>
+          <button type="button" id="resetBtn" class="btn-secondary rm-hide-sm">Reset</button>
+          <a href="./" class="btn-primary">← CV</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="page-inner rm-stack">
+
+        <!-- Hero -->
+        <section class="card rm-hero" aria-labelledby="rm-title">
+          <div class="rm-hero-main">
+            <p class="rm-eyebrow">From CMO / Head of Growth → one-person martech company</p>
+            <h1 id="rm-title" class="hero-title">Solo MarTech Founder Roadmap</h1>
+            <p class="hero-text">
+              Eight stages over about 18 months, with each step tied to the background in the CV:
+              20+ startups accelerated, agency P&amp;L, end-to-end ROI analytics and a TypeScript toolkit.
+              Most of what a solo founder needs is already there. This roadmap shows the gaps and the order to close them.
+            </p>
+            <ol class="rm-howto">
+              <li><strong>Calibrate</strong> your skill levels: drag the sliders</li>
+              <li><strong>Walk the stages</strong> and tick off steps (saved in this browser)</li>
+              <li><strong>Score your first bet</strong> and ship CV upgrades along the way</li>
+            </ol>
+          </div>
+          <div class="rm-hero-side">
+            <div class="rm-ring" id="progressRing" style="--pct:0">
+              <span id="progressPct">0%</span>
+            </div>
+            <p class="rm-small rm-muted" id="progressCount"></p>
+            <dl class="rm-stats">
+              <div><dt>Biggest gap</dt><dd id="biggestGap">–</dd></div>
+              <div><dt>Next step</dt><dd id="nextStep">–</dd></div>
+            </dl>
+          </div>
+        </section>
+
+        <!-- Skills -->
+        <section class="card" aria-labelledby="skills-title">
+          <div class="card-header">
+            <h2 id="skills-title" class="card-title">1 · Where you start</h2>
+            <p class="card-subtitle">
+              Default levels are a read of the CV (0–10). The dashed outline is what a solo martech founder needs.
+              Drag to correct; everything below updates.
+            </p>
+          </div>
+          <div class="rm-skills-grid">
+            <div>
+              <div id="radar" class="rm-radar-wrap"></div>
+              <div class="rm-legend">
+                <span><i class="rm-swatch rm-swatch-current"></i>Current</span>
+                <span><i class="rm-swatch rm-swatch-target"></i>Target</span>
+              </div>
+              <div class="rm-gaps">
+                <h3 class="rm-mini-title">Top gaps to close</h3>
+                <ol id="gapList" class="rm-gap-list"></ol>
+              </div>
+            </div>
+            <div id="skillRows" class="rm-skill-rows"></div>
+          </div>
+        </section>
+
+        <!-- Stages -->
+        <section class="card" aria-labelledby="stages-title">
+          <div class="card-header">
+            <h2 id="stages-title" class="card-title">2 · The path</h2>
+            <p class="card-subtitle">
+              The stages overlap: you sell the service while building the MVP, and start distribution before the product is finished.
+              Click a bar or a step to open it.
+            </p>
+          </div>
+          <div id="gantt" class="rm-gantt" aria-label="Timeline"></div>
+          <div id="stepper" class="rm-stepper" role="tablist" aria-label="Stages"></div>
+          <div id="stageDetail" class="rm-detail" role="tabpanel"></div>
+        </section>
+
+        <!-- Bets -->
+        <section class="card" aria-labelledby="bets-title">
+          <div class="card-header">
+            <h2 id="bets-title" class="card-title">3 · Pick your first bet</h2>
+            <p class="card-subtitle">
+              Most of these come from projects already on the CV. Re-score them after the Stage 1 interviews;
+              the ranking re-sorts when you release a slider.
+            </p>
+          </div>
+          <div id="bets" class="rm-bets"></div>
+        </section>
+
+        <!-- Integrations -->
+        <section class="card" aria-labelledby="int-title">
+          <div class="card-header">
+            <h2 id="int-title" class="card-title">4 · Build it on top of the CV</h2>
+            <p class="card-subtitle">
+              Concrete changes to the
+              <a class="rm-link" href="https://github.com/kirillchistov/cv" target="_blank" rel="noopener">cv repo</a>,
+              in roadmap order. Each one turns the CV into a tool for the current stage.
+              Effort: S ≈ an evening, M ≈ a weekend, L ≈ a sprint.
+            </p>
+          </div>
+          <div id="integrations" class="rm-ints"></div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="page-inner footer-inner">
+        <p>© <span id="year"></span> Kirill Chistov · progress is stored only in this browser</p>
+        <a href="./" class="btn-secondary btn-full-sm">Back to CV</a>
+      </div>
+    </footer>
+  </div>
+
+  <script type="module" src="/src/roadmap/main.ts"></script>
+</body>
+</html>

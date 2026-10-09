@@ -421,6 +421,12 @@ export const i18n: I18nDict = {
     fr: 'Télécharger le PDF',
     es: 'Descargar PDF',
   },
+  navRoadmap: {
+    ru: 'Роадмап',
+    en: 'Roadmap',
+    fr: 'Feuille de route',
+    es: 'Hoja de ruta',
+  },
   btnContact: {
     ru: 'Связаться',
     en: 'Contact',
