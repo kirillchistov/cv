@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light" data-title-key="tlMetaTitle">
+<head>
+  <meta charset="UTF-8" />
+  <title>Адаптация резюме под вакансию · Kirill Chistov</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Бесплатная адаптация резюме под вакансию без регистрации: ключевые слова для ATS, правило 5 секунд, рекомендации и экспорт в TXT, Markdown и DOCX. Тексты не покидают браузер." />
+  <script type="module" crossorigin src="/cv/assets/tailor-u-gR1Mpt.js"></script>
+  <link rel="modulepreload" crossorigin href="/cv/assets/topbar-B9W-Yt3E.js">
+  <link rel="stylesheet" crossorigin href="/cv/assets/topbar-jTDMguml.css">
+  <link rel="stylesheet" crossorigin href="/cv/assets/tailor-C9_4wYs9.css">
+</head>
+<body class="app">
+  <div class="page">
+    <header class="topbar">
+      <div class="page-inner topbar-inner">
+        <a class="topbar-left tl-home" href="./">
+          <div class="avatar">КЧ</div>
+          <div class="topbar-text">
+            <div class="topbar-role" data-i18n="tlRole">Адаптация резюме</div>
+            <div class="topbar-industry" data-i18n="tlTagline">ATS · правило 5 секунд · без регистрации</div>
+          </div>
+        </a>
+        <nav class="topbar-right" id="topbarActions" aria-label="Menu"></nav>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="page-inner tl-stack">
+
+        <!-- Intro + inputs -->
+        <section class="card" aria-labelledby="tl-title">
+          <p class="tl-eyebrow" data-i18n="tlEyebrow">Бесплатно · без регистрации · тексты не покидают браузер</p>
+          <h1 id="tl-title" class="hero-title" data-i18n="tlTitle">Адаптируйте резюме под вакансию</h1>
+          <p class="hero-text tl-lead" data-i18n="tlLead"></p>
+          <ol class="tl-steps">
+            <li data-i18n="tlStep1">Вставьте вакансию</li>
+            <li data-i18n="tlStep2">Вставьте резюме</li>
+            <li data-i18n="tlStep3">Скачайте новую версию</li>
+          </ol>
+
+          <form id="tailorForm" class="tl-inputs" novalidate>
+            <div class="tl-field">
+              <div class="tl-field-head">
+                <label for="vacancy" class="tl-label" data-i18n="tlVacancy">Вакансия</label>
+                <span class="tl-count" id="vacancyCount"></span>
+              </div>
+              <textarea id="vacancy" class="field-input tl-textarea" rows="14" spellcheck="false"
+                data-i18n-placeholder="tlVacancyPh"></textarea>
+              <div class="tl-field-actions">
+                <button type="button" class="tl-chip-btn" id="sampleVacancyBtn" data-i18n="tlSampleVacancy">Пример вакансии</button>
+                <button type="button" class="tl-chip-btn" data-clear="vacancy" data-i18n="tlClear">Очистить</button>
+              </div>
+              <p class="field-error" id="vacancyError"></p>
+            </div>
+
+            <div class="tl-field">
+              <div class="tl-field-head">
+                <label for="resume" class="tl-label" data-i18n="tlResume">Резюме</label>
+                <span class="tl-count" id="resumeCount"></span>
+              </div>
+              <textarea id="resume" class="field-input tl-textarea" rows="14" spellcheck="false"
+                data-i18n-placeholder="tlResumePh"></textarea>
+              <div class="tl-field-actions">
+                <button type="button" class="tl-chip-btn" id="siteResumeBtn" data-i18n="tlSiteResume">Резюме с этого сайта</button>
+                <button type="button" class="tl-chip-btn" data-clear="resume" data-i18n="tlClear">Очистить</button>
+              </div>
+              <p class="field-error" id="resumeError"></p>
+            </div>
+
+            <div class="tl-run">
+              <button type="submit" class="btn-primary tl-run-btn" data-i18n="tlRun">Адаптировать резюме</button>
+              <p class="tl-privacy" data-i18n="tlPrivacy"></p>
+            </div>
+          </form>
+        </section>
+
+        <!-- Results (filled by src/tailor/main.ts) -->
+        <div id="results" class="tl-stack" hidden></div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="page-inner footer-inner">
+        <p>© <span id="year"></span> Kirill Chistov</p>
+        <a href="./" class="btn-secondary btn-full-sm" data-i18n="navCv">CV</a>
+      </div>
+    </footer>
+  </div>
+
+</body>
+</html>

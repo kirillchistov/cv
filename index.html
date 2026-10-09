@@ -4,9 +4,10 @@
   <meta charset="UTF-8" />
   <title data-i18n="metaTitle">Кирилл Чистов — Product & Growth</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <script type="module" crossorigin src="/cv/assets/main-DLdcly2y.js"></script>
-  <link rel="modulepreload" crossorigin href="/cv/assets/projects-BNJN0J8x.js">
-  <link rel="stylesheet" crossorigin href="/cv/assets/projects-KaErvMsZ.css">
+  <script type="module" crossorigin src="/cv/assets/main-B_OVu2TP.js"></script>
+  <link rel="modulepreload" crossorigin href="/cv/assets/topbar-B9W-Yt3E.js">
+  <link rel="modulepreload" crossorigin href="/cv/assets/projects-DXZxZiD-.js">
+  <link rel="stylesheet" crossorigin href="/cv/assets/topbar-jTDMguml.css">
 </head>
 <body class="app">
   <div class="page">
@@ -23,72 +24,8 @@
           </div>
         </div>
 
-        <!-- Desktop nav -->
-        <div class="topbar-right topbar-right-desktop">
-          <!-- Theme toggle (icons) -->
-          <div class="theme-toggle" aria-label="Theme">
-            <button type="button" id="lightThemeBtn" class="theme-btn theme-btn-active" title="Light theme">
-              ☀
-            </button>
-            <button type="button" id="darkThemeBtn" class="theme-btn" title="Dark theme">
-              🌙
-            </button>
-          </div>
-
-          <!-- Language switcher -->
-          <div class="lang-toggle" aria-label="Language">
-            <button class="lang-btn lang-btn-active" data-lang="ru">RU</button>
-            <button class="lang-btn" data-lang="en">EN</button>
-            <button class="lang-btn" data-lang="fr">FR</button>
-            <button class="lang-btn" data-lang="es">ES</button>
-          </div>
-
-          <a href="./roadmap.html" class="btn-secondary" data-i18n="navRoadmap">
-            Роадмап
-          </a>
-          <button id="pdfButton" class="btn-secondary" data-i18n="btnPdf">
-            Скачать PDF
-          </button>
-          <a href="#contact" class="btn-primary" data-i18n="btnContact">
-            Связаться
-          </a>
-        </div>
-
-        <!-- Mobile nav -->
-        <button class="topbar-burger" id="burgerBtn" aria-label="Menu">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-
-      <!-- Mobile menu panel -->
-      <div class="topbar-menu" id="mobileMenu">
-        <div class="topbar-menu-inner">
-          <div class="topbar-row">
-            <div class="theme-toggle" aria-label="Theme mobile">
-              <button type="button" id="lightThemeBtnMobile" class="theme-btn theme-btn-active" title="Light theme">
-                ☀
-              </button>
-              <button type="button" id="darkThemeBtnMobile" class="theme-btn" title="Dark theme">
-                🌙
-              </button>
-            </div>
-            <div class="lang-toggle" aria-label="Language mobile">
-              <button class="lang-btn" data-lang="ru">RU</button>
-              <button class="lang-btn" data-lang="en">EN</button>
-              <button class="lang-btn" data-lang="fr">FR</button>
-              <button class="lang-btn" data-lang="es">ES</button>
-            </div>
-          </div>
-          <a href="./roadmap.html" class="btn-secondary btn-full" data-i18n="navRoadmap">
-            Роадмап
-          </a>
-          <button id="pdfButtonMobile" class="btn-secondary btn-full" data-i18n="btnPdf">
-            Скачать PDF
-          </button>
-          <a href="#contact" class="btn-primary btn-full" id="contactMobileLink" data-i18n="btnContact">
-            Связаться
-          </a>
-        </div>
+        <!-- Actions are rendered by src/topbar.ts (shared with roadmap/tailor pages) -->
+        <nav class="topbar-right" id="topbarActions" aria-label="Menu"></nav>
       </div>
     </header>
 
