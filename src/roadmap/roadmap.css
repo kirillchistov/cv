@@ -31,18 +31,6 @@
   text-decoration: none;
 }
 
-.rm-topbar-right {
-  display: flex;
-}
-
-@media (max-width: 480px) {
-  .rm-hide-sm {
-    display: none;
-  }
-  .rm-home .topbar-text {
-    display: none;
-  }
-}
 
 /* Shared bits */
 .rm-eyebrow {

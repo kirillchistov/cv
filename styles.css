@@ -94,50 +94,6 @@ body.app {
   gap: 0.5rem;
 }
 
-.topbar-right-desktop {
-  display: none;
-}
-
-/* Burger */
-.topbar-burger {
-  display: inline-flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 3px;
-  width: 32px;
-  height: 32px;
-  border-radius: 999px;
-  border: 1px solid var(--border-subtle);
-  background: var(--bg-elevated-soft);
-  cursor: pointer;
-}
-
-.topbar-burger span {
-  height: 2px;
-  width: 16px;
-  background: var(--text-soft);
-  border-radius: 999px;
-  margin: 0 auto;
-}
-
-/* Mobile menu panel */
-.topbar-menu {
-  display: none;
-  border-top: 1px solid var(--border-subtle);
-  background: var(--bg-elevated);
-}
-
-.topbar-menu.open {
-  display: block;
-}
-
-.topbar-menu-inner {
-  padding: 0.75rem 1rem 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
 /* Avatar, text */
 .avatar {
   height: 2.5rem;
@@ -165,29 +121,110 @@ body.app {
   color: var(--text-muted);
 }
 
-/* Theme toggle */
-.theme-toggle {
-  display: inline-flex;
+/* Topbar actions: icon buttons + language select */
+.icon-btn {
+  display: inline-grid;
+  place-items: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  flex: 0 0 auto;
   border-radius: 999px;
   border: 1px solid var(--border-subtle);
-  padding: 2px;
   background: var(--bg-elevated-soft);
-}
-
-.theme-btn {
-  border: none;
-  background: transparent;
-  color: var(--text-muted);
-  font-size: 0.75rem;
-  padding: 0.25rem 0.65rem;
-  border-radius: 999px;
+  color: var(--text-soft);
+  font-size: 1rem;
+  line-height: 1;
+  text-decoration: none;
   cursor: pointer;
-  transition: background-color 0.15s ease, color 0.15s ease;
+  transition: border-color 0.15s ease, color 0.15s ease, background-color 0.15s ease,
+    transform 0.1s ease;
 }
 
-.theme-btn-active {
+.icon-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-1px);
+}
+
+.icon-btn:focus-visible,
+.lang-select:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.icon-btn[aria-current="page"] {
+  border-color: var(--accent);
   background: var(--accent-soft);
   color: var(--accent);
+}
+
+.icon-btn svg {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.lang-select {
+  appearance: none;
+  -webkit-appearance: none;
+  height: 2.25rem;
+  padding: 0 1.8rem 0 0.8rem;
+  border-radius: 999px;
+  border: 1px solid var(--border-subtle);
+  background-color: var(--bg-elevated-soft);
+  /* chevron drawn with two gradients so it follows the text colour */
+  background-image: linear-gradient(45deg, transparent 50%, var(--text-muted) 50%),
+    linear-gradient(135deg, var(--text-muted) 50%, transparent 50%);
+  background-position: calc(100% - 0.95rem) 52%, calc(100% - 0.65rem) 52%;
+  background-size: 0.3rem 0.3rem;
+  background-repeat: no-repeat;
+  color: var(--text-soft);
+  font: inherit;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+}
+
+.lang-select:hover {
+  border-color: var(--accent);
+}
+
+.lang-select option {
+  background: var(--bg-elevated);
+  color: var(--text-main);
+}
+
+.topbar-contact-icon {
+  display: none;
+}
+
+.topbar-contact-icon svg {
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+@media (max-width: 639px) {
+  .topbar-text {
+    display: none;
+  }
+
+  .topbar-right {
+    gap: 0.35rem;
+  }
+
+  .topbar-contact-text {
+    display: none;
+  }
+
+  .topbar-contact-icon {
+    display: inline-flex;
+  }
+
+  .topbar-contact {
+    width: 2.25rem;
+    height: 2.25rem;
+    padding: 0;
+  }
 }
 
 /* Buttons */
@@ -605,15 +642,6 @@ body.app {
     justify-content: space-between;
     align-items: center;
   }
-
-  .topbar-right-desktop {
-    display: flex;
-  }
-
-  .topbar-burger,
-  .topbar-menu {
-    display: none;
-  }
 }
 
 /* Misc typography */
@@ -657,11 +685,7 @@ body.app {
 @media print {
   .topbar,
   .footer,
-  #pdfButton,
-  #pdfButtonBottom,
-  #pdfButtonMobile,
-  .topbar-menu,
-  .topbar-burger {
+  #pdfButtonBottom {
     display: none !important;
   }
 
@@ -684,13 +708,9 @@ body.app {
 }
 
 @media print {
-  /* скрываем только правую часть шапки и мобильное меню */
+  /* скрываем правую часть шапки */
   .topbar-right,
-  .topbar-burger,
-  .topbar-menu,
-  #pdfButton,
-  #pdfButtonBottom,
-  #pdfButtonMobile {
+  #pdfButtonBottom {
     display: none !important;
   }
 

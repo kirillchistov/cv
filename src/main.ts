@@ -1,7 +1,7 @@
 import { initTheme } from './theme';
 import { initLanguage } from './language';
 import { initForm } from './form';
-import { initMobileMenu } from './mobile-menu';
+import { renderTopbar } from './topbar';
 import { renderProjects } from './render';
 import { projects } from './projects';
 
@@ -14,7 +14,9 @@ function handlePdfClick(): void {
   window.print();
 }
 
-['pdfButton', 'pdfButtonBottom', 'pdfButtonMobile'].forEach((id) => {
+renderTopbar(['theme', 'lang', 'pdf', 'roadmap', 'tailor', 'contact'], 'cv');
+
+['pdfButton', 'pdfButtonBottom'].forEach((id) => {
   const btn = document.getElementById(id);
   if (btn) btn.addEventListener('click', handlePdfClick);
 });
@@ -23,5 +25,4 @@ function handlePdfClick(): void {
 initTheme();
 initLanguage();
 initForm();
-initMobileMenu();
 renderProjects(projects);

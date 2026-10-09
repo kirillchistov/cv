@@ -8,6 +8,7 @@ export default defineConfig({
       input: {
         main: resolve(import.meta.dirname, 'index.html'),
         roadmap: resolve(import.meta.dirname, 'roadmap.html'),
+        tailor: resolve(import.meta.dirname, 'tailor.html'),
       },
     },
   },

@@ -1,5 +1,6 @@
 import './roadmap.css';
 import { initTheme } from '../theme';
+import { renderTopbar } from '../topbar';
 import { projects } from '../projects';
 import {
   TOTAL_WEEKS,
@@ -496,6 +497,7 @@ function renderAll(): void {
 const yearEl = $('year');
 if (yearEl) yearEl.textContent = new Date().getFullYear().toString();
 
+renderTopbar(['theme', 'reset', 'roadmap', 'tailor', 'cv'], 'roadmap');
 initTheme();
 bindEvents();
 renderAll();

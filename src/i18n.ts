@@ -427,6 +427,42 @@ export const i18n: I18nDict = {
     fr: 'Feuille de route',
     es: 'Hoja de ruta',
   },
+  navTailor: {
+    ru: 'Адаптировать резюме под вакансию',
+    en: 'Tailor a resume to a job',
+    fr: 'Adapter un CV à une offre',
+    es: 'Adaptar un CV a una oferta',
+  },
+  navCv: {
+    ru: 'Резюме',
+    en: 'CV',
+    fr: 'CV',
+    es: 'CV',
+  },
+  langLabel: {
+    ru: 'Язык',
+    en: 'Language',
+    fr: 'Langue',
+    es: 'Idioma',
+  },
+  themeToDark: {
+    ru: 'Тёмная тема',
+    en: 'Dark theme',
+    fr: 'Thème sombre',
+    es: 'Tema oscuro',
+  },
+  themeToLight: {
+    ru: 'Светлая тема',
+    en: 'Light theme',
+    fr: 'Thème clair',
+    es: 'Tema claro',
+  },
+  btnReset: {
+    ru: 'Сбросить',
+    en: 'Reset',
+    fr: 'Réinitialiser',
+    es: 'Restablecer',
+  },
   btnContact: {
     ru: 'Связаться',
     en: 'Contact',

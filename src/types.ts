@@ -8,4 +8,5 @@ export interface Project {
   url: string;
 }
 
-export type I18nDict = Record<string, Record<Lang, string>>;
+// `en` is the fallback, so other languages may be omitted (e.g. tool pages are RU + EN only)
+export type I18nDict = Record<string, Partial<Record<Lang, string>> & { en: string }>;

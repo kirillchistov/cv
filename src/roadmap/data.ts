@@ -520,6 +520,15 @@ export const integrations: Integration[] = [
     stageId: 's3',
   },
   {
+    id: 'tailor',
+    title: 'Resume tailor (free tool)',
+    why: 'Paste a job post and a resume and get ATS keywords, a 5-second check and a tailored .txt/.md/.docx. Rules only, nothing leaves the browser; hands off to Career Evidence OS for AI',
+    files: ['tailor.html', 'src/tailor/*'],
+    effort: 'M',
+    stageId: 's4',
+    done: true,
+  },
+  {
     id: 'tools',
     title: 'Free tools page (lead magnet)',
     why: 'ROMI / CAC payback calculator as another Vite entry with email capture, reusing the MMM builder logic',
