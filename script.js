@@ -337,7 +337,7 @@ const i18n = {
     es: "Proyectos de codificación de vibraciones"
   },
   projectsSubtitle: {
-    ru: "Публичные репозитории и pet‑проекты с GitHub",
+    ru: "Pet‑проекты и репозитории в GitHub",
     en: "Public repositories and pet projects on GitHub",
     fr: "Dépôts publics et projets personnels sur GitHub",
     es: "Repositorios públicos y proyectos personales en GitHub"

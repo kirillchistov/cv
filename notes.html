@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <title>Что бы я сделал по-другому · Кирилл Чистов</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="description" content="Короткие тексты о каждом месте работы из резюме: что я сделал бы иначе, зная и умея то, что знаю и умею сейчас." />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body class="app ed">
+  <div class="page">
+    <header class="topbar">
+      <div class="page-inner topbar-inner">
+        <a class="topbar-left ed-home" href="./">
+          <div class="avatar">КЧ</div>
+          <div class="topbar-text">
+            <div class="topbar-role">Заметки</div>
+            <div class="topbar-industry">Что бы я сделал по-другому</div>
+          </div>
+        </a>
+        <nav class="topbar-right" id="topbarActions" aria-label="Меню"></nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="ed-wrap">
+        <section class="ed-masthead">
+          <p class="ed-kicker">Серия заметок · 6 текстов</p>
+          <h1 class="ed-display">Что бы я сделал <em>по-другому</em></h1>
+          <p class="ed-deck">
+            По одному тексту на каждую строку резюме: что тогда получилось и что я сделал бы иначе,
+            зная и умея то, что знаю и умею сейчас. Каждый текст читается за три минуты.
+          </p>
+        </section>
+
+        <div class="notes-layout">
+          <nav class="notes-toc" aria-label="Заметки" id="notesToc"></nav>
+          <article class="note" id="note" aria-live="polite"></article>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="page-inner footer-inner">
+        <p>© <span id="year"></span> Кирилл Чистов</p>
+        <a href="./cases.html" class="btn-secondary btn-full-sm">← Кейсы</a>
+      </div>
+    </footer>
+  </div>
+
+  <script type="module" src="/src/notes/main.ts"></script>
+</body>
+</html>

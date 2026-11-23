@@ -1,0 +1,170 @@
+.ed-home {
+  color: inherit;
+  text-decoration: none;
+}
+
+.notes-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr); /* the scrolling TOC strip must not widen the page */
+  gap: 2rem;
+  padding: 2.5rem 0 4rem;
+}
+
+@media (min-width: 900px) {
+  .notes-layout {
+    grid-template-columns: 16rem minmax(0, 1fr);
+    gap: 3.5rem;
+  }
+
+  .notes-toc {
+    position: sticky;
+    top: 5rem;
+    align-self: start;
+  }
+}
+
+.notes-toc ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 2px solid var(--ink);
+}
+
+.notes-toc a {
+  display: block;
+  padding: 0.75rem 0 0.75rem 0.75rem;
+  border-bottom: 1px solid var(--rule);
+  border-left: 3px solid transparent;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.notes-toc a:hover {
+  background: var(--accent-soft);
+}
+
+.notes-toc a.is-active {
+  border-left-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.toc-num {
+  display: block;
+  font-size: 0.7rem;
+  color: var(--muted);
+}
+
+.toc-title {
+  display: block;
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.3;
+}
+
+/* narrow screens: the list becomes a horizontal strip */
+@media (max-width: 899px) {
+  .notes-toc ol {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    border-top: none;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .notes-toc li {
+    flex: 0 0 13rem;
+    scroll-snap-align: start;
+  }
+
+  .notes-toc a {
+    height: 100%;
+    border-bottom: none;
+    border-left: none;
+    border-top: 3px solid transparent;
+  }
+
+  .notes-toc a.is-active {
+    border-top-color: var(--accent);
+  }
+}
+
+.note {
+  max-width: 42rem;
+  scroll-margin-top: 5rem;
+}
+
+.note-title {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: clamp(1.9rem, 4.5vw, 2.9rem);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.note-lead {
+  font-family: var(--serif);
+  font-size: 1.25rem;
+  line-height: 1.45;
+  color: var(--ink-2);
+  margin: 1rem 0 0;
+}
+
+.note-role {
+  margin: 1rem 0 0;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid var(--ink);
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+.note-body {
+  font-size: 1.06rem;
+  line-height: 1.7;
+}
+
+.note-body h2 {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 2.25rem 0 0.75rem;
+}
+
+.note-body p {
+  margin: 0 0 1.1rem;
+}
+
+.note-body strong {
+  font-family: var(--serif);
+  font-size: 1.12em;
+  font-weight: 700;
+}
+
+/* the closing one-liner reads as a pull quote */
+.note-body h2:last-of-type + p {
+  font-family: var(--serif);
+  font-size: 1.45rem;
+  font-style: italic;
+  line-height: 1.4;
+  padding-left: 1.25rem;
+  border-left: 4px solid var(--accent);
+}
+
+.note-foot {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 2.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--rule);
+}
+
+.note-nav {
+  display: inline-flex;
+  gap: 1.25rem;
+}

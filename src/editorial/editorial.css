@@ -1,0 +1,311 @@
+/* Editorial layer: the proposed new visual direction, piloted on cases.html and
+   notes.html. Paper background, serif display type, hairline rules, mono numbers,
+   one accent colour. Builds on /styles.css only for the shared topbar. */
+
+@import '@fontsource-variable/onest/index.css';
+@import '@fontsource-variable/source-serif-4/opsz.css';
+@import '@fontsource-variable/jetbrains-mono/index.css';
+
+:root[data-theme="light"] body.ed {
+  --paper: #f5f2ec;
+  --paper-2: #ebe6dc;
+  --card: #fbf9f5;
+  --ink: #17150f;
+  --ink-2: #3f3b33;
+  --muted: #7b7468;
+  --rule: #d8d0c2;
+  --accent: #c43e17;
+  --accent-soft: rgba(196, 62, 23, 0.09);
+  --marker: #ffe36e;
+  --good: #2c7a4b;
+  --bad: #b3261e;
+}
+
+:root[data-theme="dark"] body.ed {
+  --paper: #13120f;
+  --paper-2: #1c1a16;
+  --card: #191713;
+  --ink: #efe9df;
+  --ink-2: #cdc5b7;
+  --muted: #918a7d;
+  --rule: #353028;
+  --accent: #ff7d4a;
+  --accent-soft: rgba(255, 125, 74, 0.1);
+  --marker: rgba(255, 214, 92, 0.32);
+  --good: #74c995;
+  --bad: #ff8d84;
+}
+
+body.ed {
+  /* remap the CV tokens so the shared topbar matches the paper look */
+  --bg: var(--paper);
+  --bg-elevated: var(--paper);
+  --bg-elevated-soft: var(--card);
+  --border-subtle: var(--rule);
+  --text-main: var(--ink);
+  --text-soft: var(--ink-2);
+  --text-muted: var(--muted);
+
+  --serif: 'Source Serif 4 Variable', Georgia, 'Times New Roman', serif;
+  --sans: 'Onest Variable', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --mono: 'JetBrains Mono Variable', ui-monospace, Menlo, monospace;
+
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 1rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+body.ed .topbar {
+  background: color-mix(in srgb, var(--paper) 90%, transparent);
+}
+
+body.ed .avatar {
+  background: var(--ink);
+  color: var(--paper);
+  font-family: var(--serif);
+  font-weight: 600;
+}
+
+body.ed .topbar-role {
+  color: var(--accent);
+  font-family: var(--mono);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+
+body.ed .btn-primary {
+  background: var(--ink);
+  color: var(--paper);
+  box-shadow: none;
+  border-radius: 3px;
+}
+
+body.ed .btn-primary:hover {
+  background: var(--accent);
+  box-shadow: none;
+}
+
+body.ed .btn-secondary {
+  border-radius: 3px;
+  background: transparent;
+}
+
+body.ed ::selection {
+  background: var(--marker);
+  color: var(--ink);
+}
+
+.ed-wrap {
+  max-width: 70rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media (min-width: 720px) {
+  .ed-wrap {
+    padding: 0 2rem;
+  }
+}
+
+/* ---------- type ---------- */
+
+.ed-kicker {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 0.75rem;
+}
+
+.ed-display {
+  font-family: var(--serif);
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-size: clamp(2.4rem, 7vw, 5rem);
+  line-height: 0.98;
+  letter-spacing: -0.025em;
+  margin: 0;
+}
+
+.ed-display em {
+  font-style: italic;
+  font-weight: 400;
+  color: var(--accent);
+}
+
+.ed-deck {
+  font-family: var(--serif);
+  font-size: clamp(1.1rem, 2.2vw, 1.4rem);
+  line-height: 1.45;
+  color: var(--ink-2);
+  max-width: 44rem;
+  margin: 1.25rem 0 0;
+}
+
+.ed-h2 {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: clamp(1.6rem, 3.6vw, 2.4rem);
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+  margin: 0;
+}
+
+.ed-mono {
+  font-family: var(--mono);
+  font-variant-numeric: tabular-nums;
+}
+
+.ed-muted {
+  color: var(--muted);
+}
+
+.ed-mark {
+  background: linear-gradient(transparent 55%, var(--marker) 55%);
+  padding: 0 0.1em;
+}
+
+.ed-link {
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+
+.ed-link:hover {
+  color: var(--accent);
+}
+
+.ed-arrow-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.02em;
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--ink);
+  padding-bottom: 1px;
+}
+
+.ed-arrow-link:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+/* ---------- structure ---------- */
+
+.ed-masthead {
+  padding: 3.5rem 0 2.5rem;
+  border-bottom: 2px solid var(--ink);
+}
+
+.ed-section {
+  padding: 3rem 0;
+  border-bottom: 1px solid var(--rule);
+  scroll-margin-top: 4rem;
+}
+
+.ed-section-head {
+  display: grid;
+  gap: 0.5rem 2rem;
+  margin-bottom: 1.75rem;
+}
+
+@media (min-width: 900px) {
+  .ed-section-head {
+    grid-template-columns: 14rem minmax(0, 1fr);
+    align-items: baseline;
+  }
+}
+
+.ed-num {
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.ed-num strong {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.ed-badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.1rem 0.45rem;
+  border: 1px solid currentColor;
+  border-radius: 2px;
+  color: var(--accent);
+  vertical-align: middle;
+}
+
+/* table of contents */
+.ed-toc {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+}
+
+.ed-toc th {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-align: left;
+  padding: 0 0.75rem 0.5rem 0;
+  border-bottom: 1px solid var(--ink);
+}
+
+.ed-toc td {
+  padding: 0.7rem 0.75rem 0.7rem 0;
+  border-bottom: 1px solid var(--rule);
+  vertical-align: top;
+}
+
+.ed-toc tr:hover td {
+  background: var(--accent-soft);
+}
+
+.ed-toc a {
+  color: inherit;
+  text-decoration: none;
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.ed-toc a:hover {
+  color: var(--accent);
+}
+
+@media (max-width: 640px) {
+  .ed-toc .ed-hide-sm {
+    display: none;
+  }
+}
+
+body.ed .footer {
+  border-top: 2px solid var(--ink);
+  font-family: var(--mono);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.ed *,
+  body.ed *::before,
+  body.ed *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

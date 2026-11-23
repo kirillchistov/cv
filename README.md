@@ -27,3 +27,15 @@ Progress, skill estimates and bet scores are saved in `localStorage` only.
 the candidate's own facts, "what to add" recommendations and export to `.txt`, `.md` and `.docx`.
 The engine (`src/tailor/engine.ts`) is pure TypeScript and covered by `pnpm test`.
 For an AI review with follow-up questions it links to [Career Evidence OS](https://github.com/kirillchistov/carrer-os).
+
+## Cases and notes
+
+`cases.html` tells six cases from the CV, each in the format of its own channel (bank statement, metro map,
+inbox, media plan, changelog, Windows 98 dialog). `notes.html` renders `content/hindsight/*.md`, a series of
+"what I would do differently" notes, one per CV entry. Both pages pilot the editorial look in
+`src/editorial/editorial.css` (self-hosted Onest, Source Serif 4, JetBrains Mono). Review notes and open
+questions are in `docs/`.
+
+Cases and notes are drafts with restricted access: `pnpm build` (and therefore `pnpm gh-pages`) leaves them out,
+the CV does not link to them, and both pages carry `noindex`. Preview them with `pnpm dev`, or build them with
+`DRAFTS=1 pnpm build`.

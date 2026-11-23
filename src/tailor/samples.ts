@@ -77,7 +77,7 @@ export function siteResume(lang: Lang): string {
     'kchistov@gmail.com · +7 985 774 21 50 · t.me/kirchistov',
     '',
     en ? 'Summary' : 'О себе',
-    `${t('heroP1')}. ${t('heroP2')}.`,
+    [t('heroP1'), t('heroP2')].map((p) => p.replace(/\.?$/, '.')).join(' '),
     '',
     en ? 'Experience' : 'Опыт работы',
     job(1, 4),

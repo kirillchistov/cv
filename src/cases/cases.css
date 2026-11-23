@@ -1,0 +1,685 @@
+/* Case artifacts: each case borrows the look of its own channel or era. */
+
+.ed-home {
+  color: inherit;
+  text-decoration: none;
+}
+
+.case-lead {
+  margin: 0.75rem 0 0;
+  max-width: 42rem;
+  color: var(--ink-2);
+  font-size: 1.02rem;
+}
+
+.case-foot {
+  margin: 1.5rem 0 0;
+}
+
+@media (min-width: 900px) {
+  .case-foot,
+  .case > [role="figure"],
+  .case > figure {
+    margin-left: 16rem;
+  }
+}
+
+/* ---------- 01 bank statement ---------- */
+
+.stmt {
+  position: relative;
+  max-width: 44rem;
+  padding: 1.5rem 1.6rem 1.25rem;
+  background:
+    repeating-linear-gradient(0deg, transparent 0 27px, color-mix(in srgb, var(--rule) 45%, transparent) 27px 28px),
+    var(--card);
+  border: 1px solid var(--rule);
+  border-top: 6px solid var(--ink);
+  font-size: 0.92rem;
+  overflow: hidden;
+}
+
+.stmt-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px dashed var(--muted);
+}
+
+.stmt-bank {
+  margin: 0;
+  font-family: var(--mono);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.stmt-acc {
+  margin: 0.2rem 0 0;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.stmt-meta {
+  display: grid;
+  gap: 0.15rem;
+  margin: 0;
+  font-size: 0.8rem;
+}
+
+.stmt-meta div {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.stmt-meta dt {
+  color: var(--muted);
+  min-width: 4.5rem;
+}
+
+.stmt-meta dd {
+  margin: 0;
+  font-family: var(--mono);
+}
+
+.stmt-table,
+.stmt-totals {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.stmt-table th {
+  text-align: left;
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  padding: 0.9rem 0.5rem 0.35rem 0;
+}
+
+.stmt-table td {
+  padding: 0.35rem 0.5rem 0.35rem 0;
+}
+
+.stmt-table td:last-child,
+.stmt-table th:last-child {
+  text-align: right;
+  color: var(--muted);
+}
+
+.stmt-totals {
+  margin-top: 1rem;
+  border-top: 2px solid var(--ink);
+}
+
+.stmt-totals caption {
+  caption-side: top;
+  text-align: left;
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  padding: 0.9rem 0 0.25rem;
+}
+
+.stmt-totals td {
+  padding: 0.4rem 0;
+  border-bottom: 1px dotted var(--rule);
+  font-size: 1rem;
+}
+
+.stmt-totals td:last-child {
+  text-align: right;
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+
+.stmt-plus {
+  color: var(--good);
+}
+
+.stmt-stamp {
+  position: absolute;
+  right: 34%;
+  bottom: 1.1rem;
+  transform: rotate(-12deg);
+  padding: 0.3rem 0.9rem;
+  border: 3px double var(--accent);
+  border-radius: 6px;
+  color: var(--accent);
+  font-family: var(--mono);
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 0.15em;
+  opacity: 0.75;
+  pointer-events: none;
+}
+
+@media (max-width: 560px) {
+  .stmt-stamp {
+    right: 1rem;
+    bottom: 0.4rem;
+    font-size: 0.8rem;
+  }
+}
+
+/* ---------- 02 metro map ---------- */
+
+.metro {
+  margin: 0;
+  padding: 1rem 0 0;
+}
+
+.metro svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  overflow: visible;
+}
+
+.metro-line,
+.metro-branch {
+  fill: none;
+  stroke-width: 10;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.metro-line {
+  stroke: var(--accent);
+}
+
+.metro-branch {
+  stroke: var(--ink);
+  stroke-dasharray: 1 0;
+}
+
+.metro-st circle {
+  fill: var(--paper);
+  stroke: var(--ink);
+  stroke-width: 4;
+}
+
+.metro-hub circle,
+.metro-end circle {
+  stroke-width: 6;
+}
+
+.metro-end circle {
+  fill: var(--accent);
+  stroke: var(--ink);
+}
+
+.metro-st text {
+  font-family: var(--sans);
+  font-size: 15px;
+  font-weight: 600;
+  fill: var(--ink);
+}
+
+.metro-b text {
+  font-weight: 500;
+  fill: var(--ink-2);
+}
+
+.metro-train {
+  fill: var(--ink);
+  stroke: var(--paper);
+  stroke-width: 2;
+}
+
+.metro figcaption {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  margin-top: 1rem;
+  font-size: 0.82rem;
+  color: var(--ink-2);
+}
+
+.metro-key {
+  display: inline-block;
+  width: 1.6rem;
+  height: 5px;
+  margin-right: 0.45rem;
+  border-radius: 3px;
+  vertical-align: middle;
+}
+
+.metro-key-main { background: var(--accent); }
+.metro-key-branch { background: var(--ink); }
+
+/* on phones the map keeps its size and scrolls sideways, like a real metro map */
+.metro-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+@media (max-width: 640px) {
+  .metro-scroll svg {
+    min-width: 760px;
+  }
+}
+
+/* ---------- 03 inbox ---------- */
+
+.inbox {
+  display: grid;
+  max-width: 54rem;
+  border: 1px solid var(--rule);
+  background: var(--card);
+}
+
+@media (min-width: 760px) {
+  .inbox {
+    grid-template-columns: 17rem minmax(0, 1fr);
+    min-height: 17rem;
+  }
+}
+
+.inbox-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-right: 1px solid var(--rule);
+  background: var(--paper-2);
+}
+
+.inbox-item {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.15rem 0.5rem;
+  padding: 0.8rem 1rem;
+  border: none;
+  border-bottom: 1px solid var(--rule);
+  border-left: 3px solid transparent;
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.inbox-item:hover {
+  background: var(--accent-soft);
+}
+
+.inbox-item.is-active {
+  background: var(--card);
+  border-left-color: var(--accent);
+}
+
+.inbox-from {
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.inbox-date {
+  font-size: 0.72rem;
+  color: var(--muted);
+}
+
+.inbox-subj {
+  grid-column: 1 / -1;
+  font-size: 0.82rem;
+  color: var(--ink-2);
+}
+
+.inbox-mail {
+  padding: 1.25rem 1.5rem;
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  line-height: 1.55;
+}
+
+.inbox-mail p {
+  margin: 0 0 0.75rem;
+}
+
+.mail-subj {
+  font-weight: 700;
+  font-size: 1.3rem;
+  line-height: 1.25;
+}
+
+.inbox-mail .mail-meta {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  color: var(--muted);
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.mail-sign {
+  font-style: italic;
+  color: var(--ink-2);
+}
+
+/* ---------- 04 spreadsheet ---------- */
+
+.sheet {
+  max-width: 58rem;
+  border: 1px solid var(--rule);
+  background: var(--card);
+  font-size: 0.85rem;
+}
+
+.sheet-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.4rem 0.6rem;
+  border-bottom: 1px solid var(--rule);
+  background: var(--paper-2);
+}
+
+.sheet-ref {
+  min-width: 2.6rem;
+  padding: 0.1rem 0.4rem;
+  border: 1px solid var(--rule);
+  background: var(--card);
+  text-align: center;
+  font-size: 0.78rem;
+}
+
+.sheet-fx {
+  font-style: italic;
+  color: var(--muted);
+}
+
+.sheet-formula {
+  font-size: 0.8rem;
+  color: var(--accent);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sheet-scroll {
+  overflow-x: auto;
+}
+
+.sheet-grid {
+  width: 100%;
+  min-width: 40rem;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.sheet-grid th {
+  width: 2.2rem;
+  background: var(--paper-2);
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  border: 1px solid var(--rule);
+  padding: 0.2rem;
+}
+
+.sheet-grid thead th:not(:first-child) {
+  width: auto;
+}
+
+.sheet-grid td {
+  border: 1px solid var(--rule);
+  padding: 0.35rem 0.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sh-h {
+  font-weight: 700;
+  background: var(--paper-2);
+}
+
+.sh-c {
+  cursor: cell;
+  color: var(--ink);
+}
+
+.sh-c:hover {
+  background: var(--accent-soft);
+}
+
+.sh-c.is-active {
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
+  background: var(--accent-soft);
+}
+
+.sh-total td {
+  font-weight: 700;
+  border-top: 2px solid var(--ink);
+}
+
+.sheet-tabs {
+  display: flex;
+  gap: 0.2rem;
+  padding: 0.3rem 0.5rem 0;
+  border-top: 1px solid var(--rule);
+  background: var(--paper-2);
+  font-size: 0.72rem;
+}
+
+.sheet-tabs button {
+  padding: 0.25rem 0.9rem;
+  border: 1px solid transparent;
+  border-bottom: none;
+  background: transparent;
+  color: var(--muted);
+  font: inherit;
+  cursor: pointer;
+}
+
+.sheet-tabs button:hover {
+  color: var(--accent);
+}
+
+.sheet-tabs .is-active {
+  background: var(--card);
+  color: var(--ink);
+  border-color: var(--rule);
+}
+
+.sheet-hint {
+  align-self: center;
+  margin-left: 0.5rem;
+  color: var(--muted);
+}
+
+.sh-err {
+  color: var(--bad);
+  font-family: var(--mono);
+}
+
+.sheet-grid[data-sheet] {
+  min-width: 26rem;
+}
+
+.sheet-grid thead th:nth-child(2) {
+  width: 40%;
+}
+
+/* ---------- 05 changelog ---------- */
+
+.log {
+  max-width: 44rem;
+  padding: 1.25rem 1.5rem;
+  border-left: 3px solid var(--ink);
+  background: var(--card);
+  font-size: 0.92rem;
+}
+
+.log-file {
+  margin: 0 0 1rem;
+  font-size: 0.75rem;
+  color: var(--accent);
+}
+
+.log-entry + .log-entry {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px dashed var(--rule);
+}
+
+.log-ver {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.log-ver .ed-mono {
+  display: inline-block;
+  min-width: 3.4rem;
+  font-size: 0.85rem;
+  color: var(--accent);
+}
+
+.log-tag {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  font-weight: 500;
+  padding: 0.05rem 0.4rem;
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+  color: var(--muted);
+  vertical-align: middle;
+}
+
+.log-tag-major {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.log ul {
+  margin: 0.35rem 0 0 3.4rem;
+  padding: 0;
+  list-style: none;
+  color: var(--ink-2);
+}
+
+.log li b {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--good);
+  margin-right: 0.4rem;
+}
+
+@media (max-width: 560px) {
+  .log ul {
+    margin-left: 0;
+  }
+}
+
+/* ---------- 06 Windows 98 ---------- */
+
+.w98 {
+  max-width: 26rem;
+  background: #c0c0c0;
+  color: #000;
+  border: 2px solid;
+  border-color: #fff #404040 #404040 #fff;
+  box-shadow: 1px 1px 0 #000;
+  font-family: 'MS Sans Serif', Tahoma, var(--sans);
+  font-size: 0.85rem;
+}
+
+.w98-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.2rem 0.3rem 0.2rem 0.5rem;
+  background: linear-gradient(90deg, #000080, #1084d0);
+  color: #fff;
+  font-weight: 700;
+}
+
+.w98-x {
+  width: 1.1rem;
+  height: 1rem;
+  display: grid;
+  place-items: center;
+  background: #c0c0c0;
+  color: #000;
+  border: 2px solid;
+  border-color: #fff #404040 #404040 #fff;
+  font-size: 0.75rem;
+  line-height: 1;
+}
+
+.w98-body {
+  display: flex;
+  gap: 0.9rem;
+  padding: 1rem 1rem 0.5rem;
+}
+
+.w98-body p {
+  margin: 0 0 0.35rem;
+}
+
+.w98-icon {
+  flex: 0 0 auto;
+  width: 2rem;
+  height: 2rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #1c5fd4;
+  color: #fff;
+  font-family: Georgia, serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 1.2rem;
+}
+
+.w98-progress {
+  margin: 0.25rem 1rem 0;
+  height: 1rem;
+  padding: 2px;
+  border: 2px solid;
+  border-color: #404040 #fff #fff #404040;
+  background: #fff;
+}
+
+.w98-progress span {
+  display: block;
+  height: 100%;
+  width: 100%;
+  background: repeating-linear-gradient(90deg, #000080 0 10px, transparent 10px 12px);
+}
+
+.w98-actions {
+  display: flex;
+  justify-content: center;
+  padding: 0.8rem;
+}
+
+.w98-btn {
+  min-width: 5rem;
+  padding: 0.2rem 0.6rem;
+  background: #c0c0c0;
+  border: 2px solid;
+  border-color: #fff #404040 #404040 #fff;
+  box-shadow: 1px 1px 0 #000;
+  font: inherit;
+  color: #000;
+  cursor: pointer;
+}
+
+.w98-btn:active {
+  border-color: #404040 #fff #fff #404040;
+}
+
+.w98-btn:focus-visible {
+  outline: 1px dotted #000;
+  outline-offset: -5px;
+}
