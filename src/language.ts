@@ -54,6 +54,10 @@ export function applyLanguage(lang: Lang): void {
   const titleKey = htmlEl.dataset.titleKey || 'metaTitle';
   document.title = getText(titleKey, lang);
 
+  const description = document.querySelector('meta[name="description"]');
+  const descriptionText = getText('metaDescription', lang);
+  if (description && descriptionText) description.setAttribute('content', descriptionText);
+
   document.dispatchEvent(new CustomEvent('langchange', { detail: lang }));
 }
 

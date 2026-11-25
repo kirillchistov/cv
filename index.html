@@ -4,6 +4,12 @@
   <meta charset="UTF-8" />
   <title data-i18n="metaTitle">Кирилл Чистов — Product & Growth</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Помог 20+ стартапам пройти путь от интервью до выручки за 6–12 месяцев." />
+  <meta property="og:title" content="Кирилл Чистов — CMO / Growth / AdTech" />
+  <meta property="og:description" content="Помог 20+ стартапам пройти путь от интервью до выручки за 6–12 месяцев." />
+  <meta property="og:type" content="profile" />
+  <meta property="og:url" content="https://kirillchistov.github.io/cv/" />
+  <meta property="og:image" content="https://kirillchistov.github.io/cv/kir-round-sm.png" />
   <link rel="stylesheet" href="./styles.css" />
 </head>
 <body class="app">
@@ -49,11 +55,23 @@
                   CMO / Head of Growth: строю маркетинг как функцию роста прибыли.
                 </p>
                 <p class="hero-text" data-i18n="heroP1">
-                  20+ лет в технологичном маркетинге, создании и развитии performance‑driven продуктов. Помог 20+ стартапам пройти путь «от интервью до ревеню» за считанные месяцы.
+                  Помог 20+ стартапам пройти путь от интервью до выручки за 6–12 месяцев.
                 </p>
-                <p class="hero-text" data-i18n="heroP2">
-                  Специализация: ROI‑стратегия, обоснование P&amp;L, построение оптимальной многоканальной воронки с человеческим лицом, даже если процесс без людей.
-                </p>
+                <p class="hero-now" data-i18n="heroNow">Сейчас: ищу роль и проекты.</p>
+                <ul class="hero-stats">
+                  <li>
+                    <span class="hero-stat-value">20+</span>
+                    <span class="hero-stat-label" data-i18n="statStartups">стартапов до выручки за 6–12 месяцев</span>
+                  </li>
+                  <li>
+                    <span class="hero-stat-value">300–400%</span>
+                    <span class="hero-stat-label" data-i18n="statEmail">ROI email</span>
+                  </li>
+                  <li>
+                    <span class="hero-stat-value">+15%</span>
+                    <span class="hero-stat-label" data-i18n="statLtv">LTV и ARPU</span>
+                  </li>
+                </ul>
               </div>
               <div class="hero-side">
                 <div class="contact-title" data-i18n="contactsTitle">Контакты</div>
@@ -212,16 +230,6 @@
             </div>
           </section>
 
-          <!-- Projects -->
-          <!-- <section aria-labelledby="projects-title" class="card">
-            <div class="card-header">
-              <h2 id="projects-title" class="card-title" data-i18n="projectsTitle">Проекты</h2>
-              <p class="card-subtitle" data-i18n="projectsSubtitle">
-                Pet‑проекты и репозитории в GitHub.
-              </p>
-            </div>
-            <div id="projectsGrid" class="projects-grid"></div>
-          </section> -->
         </section>
 
         <!-- Right column -->
@@ -324,16 +332,15 @@
         </aside>
       </div>
 
-      <!-- Projects full-width row -->
       <div class="page-inner projects-row">
-        <section aria-labelledby="projects-title" class="card projects-card">
+        <section aria-labelledby="cases-title" class="card cases-card">
           <div class="card-header">
-            <h2 id="projects-title" class="card-title" data-i18n="projectsTitle">Проекты</h2>
-            <p class="card-subtitle" data-i18n="projectsSubtitle">
-              Pet‑проекты и репозитории в GitHub.
+            <h2 id="cases-title" class="card-title" data-i18n="casesTitle">Кейсы</h2>
+            <p class="card-subtitle" data-i18n="casesSubtitle">
+              Отраслевые кейсы: проблема, решение и как измеряли.
             </p>
           </div>
-          <div id="projectsGrid" class="projects-grid"></div>
+          <div id="caseCatalog"></div>
         </section>
       </div>
     </main>
@@ -342,7 +349,7 @@
     <footer class="footer">
       <div class="page-inner footer-inner">
         <p data-i18n="footerText">
-          © <span id="year"></span> Кирилл Чистов. Все права.
+          © <span id="year"></span> Кирилл Чистов. Все права защищены.
         </p>
         <button id="pdfButtonBottom" class="btn-secondary btn-full-sm" data-i18n="btnPdf">
           Скачать PDF

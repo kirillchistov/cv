@@ -497,7 +497,7 @@ function renderAll(): void {
 const yearEl = $('year');
 if (yearEl) yearEl.textContent = new Date().getFullYear().toString();
 
-renderTopbar(['theme', 'reset', 'roadmap', 'tailor', 'cv'], 'roadmap');
+renderTopbar(['theme', 'reset', 'tailor', 'cv'], 'roadmap');
 initTheme();
 bindEvents();
 renderAll();

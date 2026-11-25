@@ -1,9 +1,8 @@
 import { initTheme } from './theme';
 import { initLanguage } from './language';
 import { initForm } from './form';
+import { renderCatalog } from './catalog/render';
 import { renderTopbar } from './topbar';
-import { renderProjects } from './render';
-import { projects } from './projects';
 
 // Год в футере
 const yearEl = document.getElementById('year');
@@ -14,7 +13,7 @@ function handlePdfClick(): void {
   window.print();
 }
 
-renderTopbar(['theme', 'lang', 'pdf', 'roadmap', 'tailor', 'contact'], 'cv');
+renderTopbar(['theme', 'lang', 'pdf', 'tailor', 'contact'], 'cv');
 
 ['pdfButton', 'pdfButtonBottom'].forEach((id) => {
   const btn = document.getElementById(id);
@@ -22,7 +21,7 @@ renderTopbar(['theme', 'lang', 'pdf', 'roadmap', 'tailor', 'contact'], 'cv');
 });
 
 // Инициализация модулей
+renderCatalog();
 initTheme();
 initLanguage();
 initForm();
-renderProjects(projects);

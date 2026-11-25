@@ -389,6 +389,38 @@ body.app {
   line-height: 1.5;
 }
 
+.hero-now {
+  margin: 0.35rem 0 0.7rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.hero-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.25rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.hero-stat-value {
+  display: block;
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--accent);
+}
+
+.hero-stat-label {
+  display: block;
+  max-width: 11rem;
+  font-size: 0.75rem;
+  line-height: 1.35;
+  color: var(--text-muted);
+}
+
 .contact-title {
   font-size: 0.75rem;
   letter-spacing: 0.08em;
@@ -681,6 +713,163 @@ body.app {
   }
 }
 
+/* Case catalog */
+.case-filters {
+  display: flex;
+  gap: 0.4rem;
+  overflow-x: auto;
+  margin: 0 0 0.85rem;
+  padding-bottom: 0.2rem;
+}
+
+.case-filter {
+  flex: 0 0 auto;
+  border-radius: 999px;
+  border: 1px solid var(--border-subtle);
+  background: transparent;
+  color: var(--text-soft);
+  font: inherit;
+  font-size: 0.75rem;
+  padding: 0.3rem 0.7rem;
+  cursor: pointer;
+}
+
+.case-filter.is-active {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.case-carousel-wrap {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: 0.45rem;
+  align-items: center;
+}
+
+.case-carousel {
+  display: flex;
+  gap: 0.75rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 0.25rem;
+}
+
+.case-carousel:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.case-card {
+  scroll-snap-align: start;
+  flex: 0 0 min(18rem, 85%);
+  text-align: left;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-elevated-soft);
+  color: inherit;
+  font: inherit;
+  padding: 0.9rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.case-card.is-filtered-out {
+  display: none;
+}
+
+.case-card-kicker {
+  display: flex;
+  align-items: baseline;
+  gap: 0.45rem;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+.case-card-num {
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.case-card-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.case-card-kpi {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.case-card-strategy {
+  font-size: 0.78rem;
+  line-height: 1.4;
+  color: var(--text-soft);
+}
+
+.case-nav:disabled {
+  opacity: 0.35;
+  cursor: default;
+  transform: none;
+}
+
+.case-dialog {
+  width: min(40rem, calc(100% - 2rem));
+  max-height: min(40rem, calc(100vh - 2rem));
+  overflow: auto;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  background: var(--bg-elevated);
+  color: var(--text-main);
+  padding: 1.25rem;
+}
+
+.case-dialog::backdrop {
+  background: rgba(2, 6, 23, 0.45);
+}
+
+.case-dialog-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.case-dialog-meta {
+  margin: 0;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.case-dialog-title {
+  margin: 0.15rem 0 0;
+  font-size: 1.25rem;
+}
+
+.case-dialog-profile {
+  margin: 0.75rem 0 0;
+  font-size: 0.85rem;
+  color: var(--text-soft);
+}
+
+.case-dialog-body h3 {
+  margin: 1rem 0 0.25rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.case-dialog-body p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
 /* Print */
 @media print {
   .topbar,
@@ -756,6 +945,31 @@ body.app {
   #skills,
   #education {
     order: 99;
+  }
+
+  .case-filters,
+  .case-nav,
+  .case-dialog,
+  .case-card-strategy,
+  .case-card-type {
+    display: none !important;
+  }
+
+  .case-carousel-wrap {
+    display: block;
+  }
+
+  .case-carousel {
+    display: block;
+    overflow: visible;
+  }
+
+  .case-card,
+  .case-card.is-filtered-out {
+    display: flex !important;
+    width: 100%;
+    margin: 0 0 0.4rem;
+    break-inside: avoid;
   }
 
 }

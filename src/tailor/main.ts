@@ -475,7 +475,7 @@ function bind(): void {
 const yearEl = document.getElementById('year');
 if (yearEl) yearEl.textContent = new Date().getFullYear().toString();
 
-renderTopbar(['theme', 'lang', 'roadmap', 'tailor', 'cv'], 'tailor');
+renderTopbar(['theme', 'lang', 'tailor', 'cv'], 'tailor');
 initTheme();
 loadDraft();
 bind();
