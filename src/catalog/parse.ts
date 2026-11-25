@@ -60,6 +60,7 @@ function clip(text: string, max: number): string {
 function sentencesOf(text: string): string[] {
   const masked = text
     .replace(/п\. ?п\./gi, 'п\u0000п\u0000')
+    .replace(/p\. ?p\./gi, 'p\u0000p\u0000')
     .replace(/(мес|тыс|млн|руб|стр)\./gi, (token) => token.replace('.', '\u0000'));
   return masked.split(/(?<=[.!])\s+/).map((part) => part.replace(/\u0000/g, '.'));
 }
@@ -101,9 +102,12 @@ function parseSummary(markdown: string): Map<number, SummaryRow> {
   return rows;
 }
 
-function field(block: string, name: string): string {
-  const match = block.match(new RegExp(`\\*\\*${name}:\\*\\*\\s*(.+)`));
-  return match?.[1].trim() ?? '';
+function field(block: string, names: string[]): string {
+  for (const name of names) {
+    const match = block.match(new RegExp(`\\*\\*${name}\\s*:\\*\\*\\s*(.+)`, 'i'));
+    if (match) return match[1].trim();
+  }
+  return '';
 }
 
 function parseSections(block: string): CaseBlock[] {
@@ -119,7 +123,7 @@ function parseSections(block: string): CaseBlock[] {
 
 export function parseCases(markdown: string): CatalogCase[] {
   const summary = parseSummary(markdown);
-  const casesPart = markdown.split(/^## Кейсы\s*$/m)[1] ?? '';
+  const casesPart = markdown.split(/^## (?:Кейсы|Cases|Casos|Cas)\s*$/m)[1] ?? '';
   const cases: CatalogCase[] = [];
 
   for (const chunk of casesPart.split(/^### /m).slice(1)) {
@@ -127,10 +131,10 @@ export function parseCases(markdown: string): CatalogCase[] {
     if (!header) continue;
     const id = Number(header[1]);
     const rest = chunk.slice(header[0].length);
-    const category = field(rest, 'Категория');
+    const category = field(rest, ['Категория', 'Category', 'Catégorie', 'Categoría']);
     const sections = parseSections(rest);
-    const result = sections.find((section) => /решени/i.test(section.title));
-    const problem = sections.find((section) => /проблема/i.test(section.title));
+    const result = sections.find((section) => /решени|solution|résultat|resultado/i.test(section.title));
+    const problem = sections.find((section) => /проблема|problem|problème|problema/i.test(section.title));
     const row = summary.get(id);
     const useTable = Boolean(row && categoriesAlign(row.category, category));
 
@@ -139,8 +143,8 @@ export function parseCases(markdown: string): CatalogCase[] {
       title: header[2].trim(),
       category,
       type: caseType(category),
-      profile: field(rest, 'Профиль'),
-      period: field(rest, 'Период'),
+      profile: field(rest, ['Профиль', 'Profile', 'Profil', 'Perfil']),
+      period: field(rest, ['Период', 'Period', 'Période', 'Periodo']),
       kpi: useTable && row ? row.kpi : result ? kpiFromResult(result.body) : '',
       strategy: useTable && row ? row.strategy : problem ? clip(firstSentence(problem.body), 160) : '',
       sections,

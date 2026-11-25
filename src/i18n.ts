@@ -92,10 +92,10 @@ export const i18n: I18nDict = {
     es: 'Email',
   },
   fitTitle: {
-    ru: 'Фокус для CMO‑роли',
-    en: 'CMO Role Fit',
-    fr: 'Adéquation au rôle de CMO',
-    es: 'Encaje para el rol de CMO',
+    ru: 'Могу',
+    en: 'I can',
+    fr: 'Je peux',
+    es: 'Puedo',
   },
   fitSubtitle: {
     ru: 'Что могу быстро усилить в fast‑scaling AdTech / performance marketing компании',
@@ -156,6 +156,36 @@ export const i18n: I18nDict = {
     en: 'ADV Tech · AdTech, MarTech',
     fr: 'ADV Tech · AdTech, MarTech',
     es: 'ADV Tech · AdTech, MarTech',
+  },
+  expCasesOnRequest: {
+    ru: 'Кейсы по запросу',
+    en: 'Cases on request',
+    fr: 'Cas sur demande',
+    es: 'Casos a petición',
+  },
+  expCase: {
+    ru: 'Кейс',
+    en: 'Case',
+    fr: 'Cas',
+    es: 'Caso',
+  },
+  expCases: {
+    ru: 'Кейсы',
+    en: 'Cases',
+    fr: 'Cas',
+    es: 'Casos',
+  },
+  expCase1: {
+    ru: 'Кейс 1',
+    en: 'Case 1',
+    fr: 'Cas 1',
+    es: 'Caso 1',
+  },
+  expCase2: {
+    ru: 'Кейс 2',
+    en: 'Case 2',
+    fr: 'Cas 2',
+    es: 'Caso 2',
   },
   exp1Dates: {
     ru: '09.2019 – 04.2026',

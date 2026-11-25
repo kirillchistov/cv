@@ -1,5 +1,8 @@
 import { describe, expect, it } from 'vitest';
 import source from '../../docs/all-cases.md?raw';
+import english from '../../docs/all-cases.en.md?raw';
+import french from '../../docs/all-cases.fr.md?raw';
+import spanish from '../../docs/all-cases.es.md?raw';
 import { parseCases } from './parse';
 
 const fixture = `
@@ -84,5 +87,35 @@ describe('parseCases', () => {
     expect(fintech?.kpi).not.toMatch(/^2\+/);
     expect(fintech?.kpi).not.toContain('Вовлеченность');
     expect(fintech?.sections.some((section) => section.title === 'Как измеряли')).toBe(false);
+  });
+
+  it('reads the English, French and Spanish catalogs with the same numbers', () => {
+    const en = parseCases(english);
+    const fr = parseCases(french);
+    const es = parseCases(spanish);
+
+    expect(en).toHaveLength(40);
+    expect(fr).toHaveLength(40);
+    expect(es).toHaveLength(40);
+
+    expect(en[0].title).toBe('An occasion in the basket');
+    expect(en[0].kpi).toBe('Incremental sales +6.4%');
+    expect(en.find((item) => item.id === 28)?.strategy).toBe("The coach's voice chosen on the first screen");
+    expect(fr[0].title).toBe('Une occasion dans le panier');
+    expect(fr[0].kpi).toBe('Ventes incrémentales +6,4 %');
+    expect(fr.find((item) => item.id === 28)?.strategy).toBe('La voix du coach choisie au premier écran');
+    expect(es[0].title).toBe('Una ocasión en la cesta');
+    expect(es[0].kpi).toBe('Ventas incrementales +6,4 %');
+    expect(es.find((item) => item.id === 28)?.strategy).toBe('La voz del entrenador elegida en la primera pantalla');
+
+    for (const catalog of [en, fr, es]) {
+      const fintech = catalog.find((item) => item.id === 36);
+      expect(fintech?.kpi).toContain('+25');
+      expect(fintech?.kpi).not.toMatch(/engagement|вовлеченность|participation/i);
+      expect(fintech?.sections.some((section) => /measured|mesuré|midió/i.test(section.title))).toBe(false);
+      expect(catalog.find((item) => item.id === 35)?.sections.some((section) => /measured|mesuré|midió/i.test(section.title))).toBe(
+        true,
+      );
+    }
   });
 });
