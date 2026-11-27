@@ -205,10 +205,10 @@ const i18n = {
     es: "Nuevos productos MarTech para el mercado, ayudan a crecer más rápido"
   },
   heroP1: {
-    ru: "Более 20 лет в product, маркетинге и развитии бизнеса в AdTech, MarTech, FinTech и IT. Помог 20+ martech‑стартапам пройти путь от гипотез до продукта с выручкой за 6–12 месяцев",
-    en: "20+ years in product, marketing, and business growth across AdTech, MarTech, FinTech, and IT. Helped 20+ martech startups go from hypotheses to revenue‑generating products in 6–12 months",
-    fr: "Plus de 20 ans en produit, marketing et développement de business dans l’AdTech, MarTech, FinTech et IT. J’ai aidé plus de 20 startups martech à passer des hypothèses aux produits générant du revenu en 6–12 mois",
-    es: "Más de 20 años en producto, marketing y desarrollo de negocio en AdTech, MarTech, FinTech e IT. Ayudé a más de 20 startups martech a pasar de hipótesis a productos con ingresos en 6–12 meses"
+    ru: "Более 20 лет в product, маркетинге и развитии бизнеса в AdTech, MarTech, FinTech и IT. Помог 20+ martech‑стартапам пройти путь от гипотез до продукта с выручкой за 6 месяцев",
+    en: "20+ years in product, marketing, and business growth across AdTech, MarTech, FinTech, and IT. Helped 20+ martech startups go from hypotheses to revenue‑generating products in 6 months",
+    fr: "Plus de 20 ans en produit, marketing et développement de business dans l’AdTech, MarTech, FinTech et IT. J’ai aidé plus de 20 startups martech à passer des hypothèses aux produits générant du revenu en 6 mois",
+    es: "Más de 20 años en producto, marketing y desarrollo de negocio en AdTech, MarTech, FinTech e IT. Ayudé a más de 20 startups martech a pasar de hipótesis a productos con ingresos en 6 meses"
   },
   heroP2: {
     ru: "Специализация: запуск и масштабирование B2B/B2B2B‑продуктов, unit‑экономика, сквозная аналитика и кратный рост выручки",
@@ -267,8 +267,8 @@ const i18n = {
   exp1P1: {
     ru: "Провел 20+ martech‑стартапов от идеи до MVP с выручкой за <10 месяцев",
     en: "Helped 20+ martech startups jump from customer discovery to MVPs with revenue in under 10 months",
-    fr: "Accélération de plus de 20 startups martech, du customer discovery au MVP/MLP générant du revenu en 6–12 mois",
-    es: "Aceleración de más de 20 startups martech desde el customer discovery hasta el MVP/MLP con ingresos en 6–12 meses"
+    fr: "Accélération de plus de 20 startups martech, du customer discovery au MVP/MLP générant du revenu en 6 mois",
+    es: "Aceleración de más de 20 startups martech desde el customer discovery hasta el MVP/MLP con ingresos en 6 meses"
   },
   exp1P2: {
     ru: "Настройка продуктовых метрик, unit‑экономики и roadmap кратного роста",

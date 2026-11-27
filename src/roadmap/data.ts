@@ -82,7 +82,7 @@ export const skills: Skill[] = [
     current: 9,
     target: 8,
     evidence: [
-      'Took 20+ B2B martech startups from customer discovery to revenue in 6–12 months (ADV Tech, 2019–2026)',
+      'Took 20+ B2B martech startups from customer discovery to revenue in 6 months (ADV Tech, 2019–2026)',
       'Demand validation and GTM hypotheses listed as core skills',
     ],
     close: [

@@ -6,7 +6,7 @@ import { getText } from '../i18n';
 import { storedLang } from '../language';
 import type { Lang } from '../types';
 import { findKpiBeat } from './kpi';
-import { caseScheme, schemeCaptionKey, schemeKind } from './scheme';
+import { caseScheme, schemeCaption } from './scheme';
 import { parseCases, type CatalogCase } from './parse';
 
 const ru = parseCases(ruSource);
@@ -269,13 +269,13 @@ export function renderCatalog(): void {
     titleEl.textContent = item.title;
     metaEl.textContent = [item.category, item.period].filter(Boolean).join(' · ');
     profileEl.textContent = item.profile;
-    const kind = schemeKind(item.id);
-    if (schemeEl.dataset.kind !== kind) {
-      schemeEl.dataset.kind = kind;
+    const iconId = String(item.id);
+    if (schemeEl.dataset.caseIcon !== iconId) {
+      schemeEl.dataset.caseIcon = iconId;
       schemeEl.innerHTML = caseScheme(item.id);
     }
     const lang = (document.documentElement.getAttribute('data-lang') as Lang | null) ?? storedLang();
-    captionEl.textContent = getText(schemeCaptionKey(kind), lang);
+    captionEl.textContent = schemeCaption(item.id, lang);
     bodyEl.innerHTML = item.sections
       .map((section) => `<section><h3>${escapeHtml(section.title)}</h3><p>${rich(section.body)}</p></section>`)
       .join('');

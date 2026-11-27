@@ -2,7 +2,8 @@ import { defineConfig } from 'vite';
 import { resolve } from 'node:path';
 
 export default defineConfig({
-  base: '/cv/',
+  // GitHub Pages serves the site under /cv/. Vercel serves the project at the domain root.
+  base: process.env.VERCEL ? '/' : '/cv/',
   build: {
     rollupOptions: {
       input: {

@@ -3,7 +3,6 @@ import { initLanguage } from './language';
 import { initForm } from './form';
 import { renderCatalog } from './catalog/render';
 import { initCareer } from './career';
-import { initRoute } from './route';
 import { renderTopbar } from './topbar';
 
 // Год в футере
@@ -25,7 +24,6 @@ renderTopbar(['theme', 'lang', 'pdf', 'tailor', 'contact'], 'cv');
 // Инициализация модулей
 renderCatalog();
 initCareer();
-initRoute();
 initTheme();
 initLanguage();
 initForm();
