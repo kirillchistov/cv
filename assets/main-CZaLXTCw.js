@@ -1,8 +1,8 @@
-import{g as C,s as A,r as oe,i as se,a as te}from"./topbar-FquV4q89.js";function k(e,a){const n=document.querySelector(`[data-error-for="${e}"]`);n&&(n.textContent=a||"")}function re(e){return/\S+@\S+\.\S+/.test(e)}function ie(){const e=document.getElementById("contactForm"),a=document.getElementById("formStatus");e&&e.addEventListener("submit",n=>{n.preventDefault();const o=e.elements.namedItem("name").value.trim(),s=e.elements.namedItem("email").value.trim(),r=e.elements.namedItem("message").value.trim(),l=document.documentElement.getAttribute("data-lang")||"ru";let d=!1;if(o?k("name",""):(k("name",C("errName",l)),d=!0),s?re(s)?k("email",""):(k("email",C("errEmailBad",l)),d=!0):(k("email",C("errEmailEmpty",l)),d=!0),r?k("message",""):(k("message",C("errMsg",l)),d=!0),d){a&&(a.textContent="");return}const m=encodeURIComponent(C("mailSubject",l)),y=encodeURIComponent(`${C("formNameLabel",l)}: ${o}
+import{g as q,s as A,r as se,i as te,a as re}from"./topbar-DYFFwUw0.js";function j(e,a){const n=document.querySelector(`[data-error-for="${e}"]`);n&&(n.textContent=a||"")}function ie(e){return/\S+@\S+\.\S+/.test(e)}function le(){const e=document.getElementById("contactForm"),a=document.getElementById("formStatus");e&&e.addEventListener("submit",n=>{n.preventDefault();const o=e.elements.namedItem("name").value.trim(),s=e.elements.namedItem("email").value.trim(),t=e.elements.namedItem("message").value.trim(),i=document.documentElement.getAttribute("data-lang")||"ru";let l=!1;if(o?j("name",""):(j("name",q("errName",i)),l=!0),s?ie(s)?j("email",""):(j("email",q("errEmailBad",i)),l=!0):(j("email",q("errEmailEmpty",i)),l=!0),t?j("message",""):(j("message",q("errMsg",i)),l=!0),l){a&&(a.textContent="");return}const p=encodeURIComponent(q("mailSubject",i)),C=encodeURIComponent(`${q("formNameLabel",i)}: ${o}
 Email: ${s}
 
-${C("formMsgLabel",l)}:
-${r}`),w=`mailto:kchistov@gmail.com?subject=${m}&body=${y}`;window.location.href=w,a&&(a.textContent=C("formStatus",l))})}const le=`# 35 кейсов интегрированного маркетинга и 5 победных стратегий
+${q("formMsgLabel",i)}:
+${t}`),b=`mailto:kchistov@gmail.com?subject=${p}&body=${C}`;window.location.href=b,a&&(a.textContent=q("formStatus",i))})}const ce=`# 35 кейсов интегрированного маркетинга и 5 победных стратегий
 
 ## Сводка
 
@@ -885,7 +885,7 @@ ${r}`),w=`mailto:kchistov@gmail.com?subject=${m}&body=${y}`;window.location.href
 1) **Problem.** IT professionals do not trust the quality of "heavy" products (development tools, databases, OLAP, and so on).
 2) **Solution and result.** A support program for the community of solution developers was launched, with more than a tenfold rise in license revenue and in awareness and loyalty metrics. Over 2 years: 2 → **18** events a year, 200 → **2,000+** offline participants, **MAU** 1,500 → **28,000**.
 3) **Creative and tools.** The global program was adapted in depth: the site, a subscription to content and software, conferences, seminars, and workshops. A "regional director" program of local opinion leaders was launched, and a live channel was set up to collect feedback and needs in the corporate segment.
-`,ce=`# 35 cas de marketing intégré et 5 stratégies gagnantes
+`,ue=`# 35 cas de marketing intégré et 5 stratégies gagnantes
 
 ## Sommaire
 
@@ -1327,7 +1327,7 @@ ${r}`),w=`mailto:kchistov@gmail.com?subject=${m}&body=${y}`;window.location.href
 1) **Problème.** Les professionnels de l'informatique ne font pas confiance à la qualité des produits « lourds » (outils de développement, bases de données, OLAP, etc.).
 2) **Solution et résultat.** Un programme de soutien à la communauté des développeurs de solutions a été lancé, avec une croissance de plus de dix fois du chiffre de licences et des indicateurs de notoriété et de fidélité. En 2 ans : 2 → **18** événements par an, 200 → **2 000+** participants en présentiel, **MAU** 1 500 → **28 000**.
 3) **Création et outils.** Le programme mondial a été adapté en profondeur : site, abonnement au contenu et au logiciel, conférences, séminaires et ateliers. Un programme de « directeur régional » (leaders d'opinion locaux) a été lancé, et un canal vivant de recueil des retours et des besoins du segment entreprise a été mis en place.
-`,ue=`# 35 casos de marketing integrado y 5 estrategias ganadoras
+`,pe=`# 35 casos de marketing integrado y 5 estrategias ganadoras
 
 ## Sumario
 
@@ -1769,53 +1769,172 @@ ${r}`),w=`mailto:kchistov@gmail.com?subject=${m}&body=${y}`;window.location.href
 1) **Problema.** Los profesionales de TI no confían en la calidad de los productos «pesados» (herramientas de desarrollo, bases de datos, OLAP, etc.).
 2) **Solución y resultado.** Se lanzó un programa de apoyo a la comunidad de desarrolladores de soluciones, con un crecimiento de más de diez veces en la cifra de licencias y en los indicadores de notoriedad y fidelidad. En 2 años: 2 → **18** eventos al año, 200 → **2 000+** participantes presenciales, **MAU** 1 500 → **28 000**.
 3) **Creatividad y herramientas.** El programa mundial se adaptó en profundidad: sitio, suscripción a contenido y software, conferencias, seminarios y talleres. Se lanzó un programa de «director regional» (líderes de opinión locales) y se puso en marcha un canal vivo de recogida de feedback y de necesidades del segmento empresarial.
-`;function B(e){const a=e.trim(),n=a.startsWith("+")?"+":a.startsWith("−")?"−":a.startsWith("-")?"-":"",o=(n?a.slice(1):a).trim(),s=o.includes(","),r=/\d\s+\d/.test(o),l=o.match(/[.,](\d+)/),d=l?l[1].length:0,m=Number(o.replace(/\s/g,"").replace(",","."));return{value:n==="+"||n===""?m:-Math.abs(m),style:{decimals:d,comma:s,sign:n,grouped:r}}}function pe(e,a){const n=a<0,o=Math.abs(a);let s=e.decimals>0?o.toFixed(e.decimals):String(Math.round(o));if(e.comma&&(s=s.replace(".",",")),e.grouped){const r=s.search(/[.,]/),l=r===-1?s:s.slice(0,r),d=r===-1?"":s.slice(r);s=`${l.replace(/\B(?=(\d{3})+(?!\d))/g," ")}${d}`}return n?`${e.sign==="-"?"-":"−"}${s}`:e.sign==="+"?`+${s}`:s}function U(e,a,n,o){const{style:s}=B(e);return{start:a,end:a+e.length,from:n,to:o,format:r=>pe(s,r)}}const z="[+−-]?\\d(?:[\\d\\s]*\\d)?(?:[.,]\\d+)?";function me(e){const a=new RegExp(`(${z})\\s*%?\\s*(?:→|->)\\s*(${z})`).exec(e);if(a?.[1]&&a[2]&&a.index!=null){const r=a[2],l=a.index+a[0].length-r.length;return U(r,l,B(a[1]).value,B(r).value)}const n=/[x×]\s*(\d+(?:[.,]\d+)?)/i.exec(e);if(n?.[1]&&n.index!=null){const r=n[1],l=n.index+n[0].length-r.length;return U(r,l,0,B(r).value)}const o=new RegExp(`(${z})\\s*(?:%|п\\.\\s*п\\.|p\\.\\s*p\\.)`,"gi");let s=null;for(let r=o.exec(e);r;r=o.exec(e))s=r;return s?.[1]&&s.index!=null?U(s[1],s.index,0,B(s[1]).value):null}const he={1:"fan",2:"pulse",3:"relay",4:"loop",5:"fan",6:"loop",7:"pulse",8:"loop",9:"relay",10:"relay",11:"loop",12:"fan",13:"funnel",14:"pulse",15:"loop",16:"loop",17:"fan",18:"relay",19:"pulse",20:"relay",21:"pulse",22:"fan",23:"relay",24:"fan",25:"relay",26:"loop",27:"relay",28:"fan",29:"pulse",30:"loop",31:"relay",32:"pulse",33:"loop",34:"funnel",35:"relay",36:"funnel",37:"branch",38:"branch",39:"branch",40:"loop"},ge={fan:`
-    <path class="scheme-track" d="M18 32 H92" />
-    <path class="scheme-arm" d="M92 32 L156 14" />
-    <path class="scheme-arm" d="M92 32 H176" style="animation-delay:0.15s" />
-    <path class="scheme-arm" d="M92 32 L156 50" style="animation-delay:0.3s" />
-    <circle class="scheme-node" cx="18" cy="32" r="6" />
-    <circle class="scheme-node scheme-end" cx="160" cy="14" r="5" />
-    <circle class="scheme-node scheme-end" cx="180" cy="32" r="5" />
-    <circle class="scheme-node scheme-end" cx="160" cy="50" r="5" />
-    <circle class="scheme-token" r="3.4" />
-  `,loop:`
-    <path class="scheme-track" d="M120 16 H188 A16 16 0 0 1 204 32 A16 16 0 0 1 188 48 H52 A16 16 0 0 1 36 32 A16 16 0 0 1 52 16 H120" />
-    <circle class="scheme-node" cx="120" cy="16" r="5" />
-    <circle class="scheme-token" r="3.4" />
-  `,pulse:`
-    <circle class="scheme-beacon" cx="28" cy="32" r="10" />
-    <circle class="scheme-node" cx="28" cy="32" r="4.5" />
-    <path class="scheme-track" d="M44 32 H196" />
-    <circle class="scheme-node scheme-end" cx="208" cy="32" r="6" />
-    <circle class="scheme-token" r="3.4" />
-  `,relay:`
-    <path class="scheme-track" d="M22 32 H218" />
-    <circle class="scheme-node" cx="22" cy="32" r="6" />
-    <circle class="scheme-node scheme-mid" cx="120" cy="32" r="6" />
-    <circle class="scheme-node scheme-end" cx="218" cy="32" r="6" />
-    <circle class="scheme-token" r="3.4" />
-  `,funnel:`
-    <path class="scheme-track" d="M20 14 V50" />
-    <path class="scheme-arm" d="M24 14 C96 14 150 28 206 32" />
-    <path class="scheme-arm" d="M24 50 C96 50 150 36 206 32" style="animation-delay:0.12s" />
-    <path class="scheme-track scheme-guide" d="M36 32 H196" />
-    <circle class="scheme-node scheme-end" cx="214" cy="32" r="6" />
-    <circle class="scheme-token" r="3.4" />
-  `,branch:`
-    <path class="scheme-track" d="M20 40 H110" />
-    <path class="scheme-arm" d="M110 40 L168 16" />
-    <path class="scheme-arm" d="M110 40 H198" style="animation-delay:0.12s" />
-    <path class="scheme-arm" d="M110 40 L168 56" style="animation-delay:0.24s" />
-    <path class="scheme-arm" d="M66 40 V16" style="animation-delay:0.36s" />
-    <circle class="scheme-node" cx="20" cy="40" r="6" />
-    <circle class="scheme-node scheme-end" cx="172" cy="14" r="4.5" />
-    <circle class="scheme-node scheme-end" cx="202" cy="40" r="4.5" />
-    <circle class="scheme-node scheme-end" cx="172" cy="56" r="4.5" />
-    <circle class="scheme-node scheme-end" cx="66" cy="14" r="4.5" />
-    <circle class="scheme-token" r="3.4" />
-  `};function _(e){return he[e]??"relay"}function fe(e){return e==="fan"?"schemeFan":e==="loop"?"schemeLoop":e==="pulse"?"schemePulse":e==="funnel"?"schemeFunnel":e==="branch"?"schemeBranch":"schemeRelay"}function Q(e){const a=_(e);return`<svg class="scheme scheme-${a}" viewBox="0 0 240 64" aria-hidden="true">${ge[a]}</svg>`}const $={"mobile app":"мобильное приложение","b2b services":"professional services"};function W(e){return e.toLowerCase().replace(/&/g," ").replace(/[·,./]+/g," ").replace(/\s+/g," ").trim()}function X(e){return(e.split("·").at(-1)??e).trim()}function ve(e,a){const n=W(e),o=W(X(a));return n===o?!0:$[n]===o||$[o]===n}function I(e){return e.replace(/\*\*/g,"").replace(/\s+/g," ").trim()}function be(e,a){return e.length<=a?e:`${e.slice(0,a-1).trimEnd()}…`}function Z(e){return e.replace(/п\. ?п\./gi,"п\0п\0").replace(/p\. ?p\./gi,"p\0p\0").replace(/(мес|тыс|млн|руб|стр)\./gi,n=>n.replace(".","\0")).split(new RegExp("(?<=[.!])\\s+")).map(n=>n.replace(/\u0000/g,"."))}function ye(e){return Z(I(e))[0]??I(e)}function Ce(e,a){const n=e.search(/%|→|->|п\. ?п|x\d|×/i);if(n<0||e.length<=a)return e;const o=Math.max(0,n-Math.floor(a*.65));let s=e.slice(o,o+a).trim();return o>0&&(s=s.replace(/^\S*\s+/,"")),o+a<e.length&&(s=s.replace(/\s+\S*$/,"")),s.trim()}function we(e){const a=Z(I(e)).filter(Boolean),n=a.find(o=>/\d/.test(o)&&/%|п\. ?п|→|->|x\d|×/i.test(o))??a.find(o=>/\d/.test(o))??a[0]??"";return n.length>120?Ce(n,120):n}function Pe(e){const a=new Map;for(const n of e.split(`
-`)){if(!n.startsWith("|"))continue;const o=n.split("|").slice(1,-1).map(r=>r.trim());if(o.length<5)continue;const s=Number(o[0]);!Number.isInteger(s)||s<=0||a.set(s,{category:o[1],kpi:o[3],strategy:o[4]})}return a}function F(e,a){for(const n of a){const o=e.match(new RegExp(`\\*\\*${n}\\s*:\\*\\*\\s*(.+)`,"i"));if(o)return o[1].trim()}return""}function qe(e){const a=[],n=/(?:^|\n)\d+\)\s+\*\*([^*]+)\*\*\.?\s*([\s\S]*?)(?=\n\d+\)\s+\*\*|$)/g;for(const o of e.matchAll(n)){const s=o[1].replace(/\.+$/,"").trim(),r=o[2].replace(/^\.\s*/,"").trim();s&&r&&a.push({title:s,body:r})}return a}function M(e){const a=Pe(e),n=e.split(/^## (?:Кейсы|Cases|Casos|Cas)\s*$/m)[1]??"",o=[];for(const s of n.split(/^### /m).slice(1)){const r=s.match(/^(\d+)\.\s+([^\n]+)/);if(!r)continue;const l=Number(r[1]),d=s.slice(r[0].length),m=F(d,["Категория","Category","Catégorie","Categoría"]),y=qe(d),w=y.find(P=>/решени|solution|résultat|resultado/i.test(P.title)),L=y.find(P=>/проблема|problem|problème|problema/i.test(P.title)),f=a.get(l),j=!!(f&&ve(f.category,m));o.push({id:l,title:r[2].trim(),category:m,type:X(m),profile:F(d,["Профиль","Profile","Profil","Perfil"]),period:F(d,["Период","Period","Période","Periodo"]),kpi:j&&f?f.kpi:w?we(w.body):"",strategy:j&&f?f.strategy:L?be(ye(L.body),160):"",sections:y})}return o}const b=M(le);function D(e){if(e.length!==b.length)return b;const a=new Map(e.map(n=>[n.id,n]));return b.some(n=>!a.has(n.id))?b:b.map(n=>a.get(n.id))}const Y={ru:b,en:D(M(de)),fr:D(M(ce)),es:D(M(ue))};function ee(e){return e.replace(/[&<>"]/g,a=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"})[a])}function Le(e){return ee(e.replace(/\s*\n\s*/g," ").trim()).replace(/\*\*([^*]+)\*\*/g,"<strong>$1</strong>")}const ke=/решени|solution|résultat|resultado/i,O=()=>window.matchMedia("(prefers-reduced-motion: reduce)").matches;function je(e,a,n){const o=Number(e.dataset.caseId),s=e.querySelector(".case-card-kpi");if(!Number.isInteger(o)||!s||a.has(o)||n.has(o))return;const r=s.dataset.kpiFinal||s.textContent||"",l=me(r);if(!l||O()){a.add(o),s.textContent=r;return}const d=(n.get(o)??0)+1;n.set(o,d),s.textContent=`${r.slice(0,l.start)}${l.format(l.from)}${r.slice(l.end)}`;const m=performance.now(),y=w=>{if(n.get(o)!==d)return;const L=s.dataset.kpiFinal??r;if(L!==r){n.delete(o),a.add(o),s.textContent=L;return}const f=Math.min(1,(w-m)/700),j=1-(1-f)**3,P=l.from+(l.to-l.from)*j;if(s.textContent=`${r.slice(0,l.start)}${l.format(P)}${r.slice(l.end)}`,f<1){requestAnimationFrame(y);return}s.textContent=r,n.delete(o),a.add(o),s.classList.add("is-kpi-hot"),window.setTimeout(()=>s.classList.remove("is-kpi-hot"),420)};requestAnimationFrame(y)}function Be(){const e=document.getElementById("caseCatalog");if(!e||b.length===0)return;const a=document.createElement("div");a.className="case-filters",a.setAttribute("role","toolbar");const n=document.createElement("button");n.type="button",n.className="case-filter is-active",n.dataset.caseFilter="",n.dataset.i18n="casesAll",n.textContent=C("casesAll",A()),n.setAttribute("aria-pressed","true"),a.append(n);const o=[...new Set(b.map(t=>t.type).filter(Boolean))];for(const t of o){const i=document.createElement("button");i.type="button",i.className="case-filter",i.dataset.caseFilter=t,i.textContent=t,i.setAttribute("aria-pressed","false"),a.append(i)}const s=document.createElement("div");s.className="case-carousel-wrap";const r=document.createElement("button");r.type="button",r.className="icon-btn case-nav",r.dataset.casePrev="",r.dataset.i18nTitle="casesPrev",r.innerHTML='<span aria-hidden="true">‹</span>';const l=document.createElement("button");l.type="button",l.className="icon-btn case-nav",l.dataset.caseNext="",l.dataset.i18nTitle="casesNext",l.innerHTML='<span aria-hidden="true">›</span>';const d=document.createElement("div");d.className="case-carousel",d.tabIndex=0,d.dataset.i18nTitle="casesCarousel";for(const t of b){const i=document.createElement("button");i.type="button",i.className="case-card",i.dataset.caseType=t.type,i.dataset.caseId=String(t.id);const h=document.createElement("span");h.className="case-card-kicker";const u=document.createElement("span");u.className="case-card-num",u.textContent=String(t.id);const p=document.createElement("span");p.className="case-card-type",h.append(u,p);const c=document.createElement("span");c.className="case-card-title";const g=document.createElement("span");g.className="case-scheme",g.setAttribute("aria-hidden","true"),g.innerHTML=Q(t.id);const v=document.createElement("span");v.className="case-card-kpi";const q=document.createElement("span");q.className="case-card-strategy",i.append(h,c,g,v,q),d.append(i)}s.append(r,d,l);const m=document.createElement("dialog");m.className="case-dialog",m.innerHTML=`
+`;function x(e){const a=e.trim(),n=a.startsWith("+")?"+":a.startsWith("−")?"−":a.startsWith("-")?"-":"",o=(n?a.slice(1):a).trim(),s=o.includes(","),t=/\d\s+\d/.test(o),i=o.match(/[.,](\d+)/),l=i?i[1].length:0,p=Number(o.replace(/\s/g,"").replace(",","."));return{value:n==="+"||n===""?p:-Math.abs(p),style:{decimals:l,comma:s,sign:n,grouped:t}}}function me(e,a){const n=a<0,o=Math.abs(a);let s=e.decimals>0?o.toFixed(e.decimals):String(Math.round(o));if(e.comma&&(s=s.replace(".",",")),e.grouped){const t=s.search(/[.,]/),i=t===-1?s:s.slice(0,t),l=t===-1?"":s.slice(t);s=`${i.replace(/\B(?=(\d{3})+(?!\d))/g," ")}${l}`}return n?`${e.sign==="-"?"-":"−"}${s}`:e.sign==="+"?`+${s}`:s}function z(e,a,n,o){const{style:s}=x(e);return{start:a,end:a+e.length,from:n,to:o,format:t=>me(s,t)}}const F="[+−-]?\\d(?:[\\d\\s]*\\d)?(?:[.,]\\d+)?";function he(e){const a=new RegExp(`(${F})\\s*%?\\s*(?:→|->)\\s*(${F})`).exec(e);if(a?.[1]&&a[2]&&a.index!=null){const t=a[2],i=a.index+a[0].length-t.length;return z(t,i,x(a[1]).value,x(t).value)}const n=/[x×]\s*(\d+(?:[.,]\d+)?)/i.exec(e);if(n?.[1]&&n.index!=null){const t=n[1],i=n.index+n[0].length-t.length;return z(t,i,0,x(t).value)}const o=new RegExp(`(${F})\\s*(?:%|п\\.\\s*п\\.|p\\.\\s*p\\.)`,"gi");let s=null;for(let t=o.exec(e);t;t=o.exec(e))s=t;return s?.[1]&&s.index!=null?z(s[1],s.index,0,x(s[1]).value):null}function d(e,a){return`<svg class="case-ico ico-${e}" viewBox="0 0 64 64" aria-hidden="true">${a}</svg>`}const $={1:d("bob",`
+    <path class="ico-stroke" d="M22 28h20l-2 22H24z"/>
+    <path class="ico-stroke ico-motion" d="M26 28c1-8 11-8 12 0"/>
+    <path class="ico-soft" d="M18 28h28"/>
+  `),2:d("pulse",`
+    <ellipse class="ico-stroke" cx="32" cy="40" rx="16" ry="6"/>
+    <path class="ico-stroke" d="M16 40c2-10 8-16 16-16s14 6 16 16"/>
+    <circle class="ico-stroke ico-motion" cx="46" cy="18" r="7"/>
+    <path class="ico-stroke" d="M46 15v3l2 2"/>
+  `),3:d("pulse",`
+    <rect class="ico-stroke" x="14" y="28" width="36" height="22" rx="2"/>
+    <path class="ico-stroke" d="M14 36h36M32 28v22"/>
+    <path class="ico-stroke ico-motion" d="M32 28c-4-8-14-6-8 0 4-3 8 0 8 0s4-3 8 0c6-6-4-8-8 0z"/>
+  `),4:d("pulse",`
+    <rect class="ico-stroke" x="14" y="16" width="36" height="34" rx="3"/>
+    <path class="ico-stroke" d="M14 26h36M24 12v8M40 12v8"/>
+    <circle class="ico-fill ico-motion" cx="26" cy="36" r="2.4"/>
+    <circle class="ico-soft" cx="36" cy="36" r="2.4"/>
+    <circle class="ico-soft" cx="26" cy="44" r="2.4"/>
+  `),5:d("bob",`
+    <path class="ico-stroke" d="M28 24h10l2 26H26z"/>
+    <path class="ico-stroke" d="M30 24V16h8"/>
+    <path class="ico-stroke ico-motion" d="M42 18c5 2 7 8 4 12M46 16c2-1 5 0 6 2"/>
+  `),6:d("bob",`
+    <rect class="ico-stroke" x="24" y="18" width="16" height="30" rx="5"/>
+    <path class="ico-stroke" d="M28 18v-5h8v5"/>
+    <path class="ico-stroke ico-motion" d="M32 28c5 4 5 12 0 16"/>
+  `),7:d("pulse",`
+    <path class="ico-stroke ico-motion" d="M32 10v44M12 22l40 20M12 42L52 22"/>
+    <circle class="ico-fill" cx="32" cy="32" r="4"/>
+  `),8:d("pulse",`
+    <rect class="ico-stroke" x="12" y="16" width="30" height="32" rx="3"/>
+    <path class="ico-fill ico-motion" d="M22 26l12 6-12 6z"/>
+    <path class="ico-soft" d="M48 20v24M54 24v16"/>
+  `),9:d("bob",`
+    <path class="ico-soft" d="M16 40c0 7 8 9 8 0 0-9-8-16-8-16s-8 7-8 16z"/>
+    <path class="ico-stroke ico-motion" d="M32 38c0 8 8 10 8 0 0-10-8-18-8-18s-8 8-8 18z"/>
+    <path class="ico-soft" d="M48 40c0 7 8 9 8 0 0-9-8-16-8-16s-8 7-8 16z"/>
+  `),10:d("bob",`
+    <path class="ico-stroke ico-motion" d="M32 14a5 5 0 015 5c0 3-5 5-5 5s-5-2-5-5a5 5 0 015-5z"/>
+    <path class="ico-stroke" d="M32 24L50 36H14z"/>
+    <path class="ico-soft" d="M20 36c2 8 6 12 12 12s10-4 12-12"/>
+  `),11:d("bob",`
+    <path class="ico-stroke" d="M24 24l8-6 8 6 6 4-5 5-3-2v18H26V31l-3 2-5-5z"/>
+    <path class="ico-stroke ico-motion" d="M48 42V26m0 0l-4 4m4-4l4 4"/>
+  `),12:d("pulse",`
+    <rect class="ico-stroke" x="10" y="14" width="44" height="28" rx="2"/>
+    <path class="ico-stroke" d="M26 50h12M32 42v8"/>
+    <rect class="ico-fill ico-motion" x="18" y="20" width="18" height="12" rx="1"/>
+  `),13:d("pulse",`
+    <rect class="ico-stroke" x="16" y="10" width="26" height="40" rx="3"/>
+    <path class="ico-stroke" d="M22 20h14M22 28h10M22 36h12"/>
+    <circle class="ico-stroke ico-motion" cx="44" cy="44" r="8"/>
+    <path class="ico-stroke" d="M44 40v4l3 2"/>
+  `),14:d("pulse",`
+    <rect class="ico-stroke ico-motion" x="8" y="20" width="48" height="28" rx="4"/>
+    <path class="ico-stroke" d="M8 30h48"/>
+    <rect class="ico-fill" x="14" y="36" width="10" height="6" rx="1"/>
+  `),15:d("pulse",`
+    <circle class="ico-stroke" cx="32" cy="32" r="18"/>
+    <circle class="ico-stroke" cx="32" cy="32" r="10"/>
+    <circle class="ico-fill ico-motion" cx="32" cy="32" r="3.5"/>
+  `),16:d("pulse",`
+    <path class="ico-stroke" d="M32 10l18 7v14c0 12-8 18-18 22C22 49 14 43 14 31V17z"/>
+    <path class="ico-stroke ico-motion" d="M24 32l6 6 12-14"/>
+  `),17:d("draw",`
+    <path class="ico-stroke" d="M12 50h40"/>
+    <path class="ico-stroke ico-motion" d="M16 42l10-12 8 6 14-18"/>
+    <circle class="ico-fill" cx="48" cy="18" r="2.5"/>
+  `),18:d("bob",`
+    <path class="ico-stroke ico-motion" d="M32 52s16-14 16-26a16 16 0 10-32 0c0 12 16 26 16 26z"/>
+    <circle class="ico-fill" cx="32" cy="26" r="5"/>
+  `),19:d("bob",`
+    <path class="ico-stroke ico-motion" d="M8 36l46-14-12 8 8 14-10-8-8 8-2-10z"/>
+  `),20:d("bob",`
+    <path class="ico-stroke" d="M14 36l6-12h20l8 12"/>
+    <path class="ico-stroke" d="M10 36h44v8H10z"/>
+    <circle class="ico-fill ico-motion" cx="20" cy="46" r="3.5"/>
+    <circle class="ico-fill" cx="46" cy="46" r="3.5"/>
+  `),21:d("draw",`
+    <path class="ico-stroke" d="M12 42a20 20 0 0140 0"/>
+    <path class="ico-stroke" d="M32 42V28"/>
+    <path class="ico-stroke ico-motion" d="M32 42l12-8"/>
+    <circle class="ico-fill" cx="32" cy="42" r="2.5"/>
+  `),22:d("pulse",`
+    <rect class="ico-stroke" x="14" y="12" width="36" height="40"/>
+    <path class="ico-stroke" d="M14 28h36M32 28v24"/>
+    <rect class="ico-fill ico-motion" x="20" y="16" width="8" height="7"/>
+    <rect class="ico-soft" x="36" y="34" width="8" height="10"/>
+  `),23:d("bob",`
+    <path class="ico-stroke" d="M8 30L32 12l24 18"/>
+    <path class="ico-stroke" d="M16 28v22h32V28"/>
+    <path class="ico-stroke ico-motion" d="M28 50V36h8v14"/>
+  `),24:d("bob",`
+    <circle class="ico-stroke" cx="24" cy="26" r="9"/>
+    <circle class="ico-fill" cx="24" cy="26" r="3"/>
+    <path class="ico-stroke ico-motion" d="M31 32l18 12-5 5-5-4-4 5-5-5"/>
+  `),25:d("bob",`
+    <path class="ico-stroke" d="M12 34v12h40V34"/>
+    <path class="ico-stroke ico-motion" d="M14 34c0-8 8-10 12-2h12c4-8 12-6 12 2"/>
+    <path class="ico-soft" d="M18 46v6M46 46v6"/>
+  `),26:d("bob",`
+    <path class="ico-stroke" d="M18 46L36 28"/>
+    <path class="ico-stroke ico-motion" d="M34 16l14 6-8 8-12-8z"/>
+    <path class="ico-soft" d="M16 50h14"/>
+  `),27:d("pulse",`
+    <path class="ico-stroke" d="M10 18h18c3 3 7 3 10 0h16v30H38c-3 3-7 3-10 0H10z"/>
+    <path class="ico-stroke ico-motion" d="M32 18v30"/>
+  `),28:d("pulse",`
+    <path class="ico-stroke ico-motion" d="M16 24v16M24 18v28M40 18v28M48 24v16M24 32h16"/>
+  `),29:d("bob",`
+    <path class="ico-stroke ico-motion" d="M12 20h40v8a5 5 0 000 10v8H12v-8a5 5 0 000-10z"/>
+    <path class="ico-soft" d="M32 22v22" stroke-dasharray="2 3"/>
+  `),30:d("pulse",`
+    <path class="ico-stroke" d="M12 14h30a4 4 0 014 4v14a4 4 0 01-4 4H26l-8 8v-8h-6a4 4 0 01-4-4V18a4 4 0 014-4z"/>
+    <path class="ico-stroke ico-motion" d="M22 34l6-14 6 14M25 28h6"/>
+  `),31:d("draw",`
+    <path class="ico-stroke" d="M18 10h18l12 12v30H18z"/>
+    <path class="ico-stroke" d="M36 10v12h12"/>
+    <path class="ico-stroke ico-motion" d="M24 32h16M24 38h12M24 44h14"/>
+  `),32:d("bob",`
+    <path class="ico-stroke" d="M32 14v32M20 50h24"/>
+    <path class="ico-stroke ico-motion" d="M14 22h36"/>
+    <path class="ico-stroke" d="M14 22l-6 12h12zM50 22l-6 12h12z"/>
+  `),33:d("pulse",`
+    <rect class="ico-stroke" x="16" y="8" width="32" height="48" rx="3"/>
+    <rect class="ico-fill ico-motion" x="22" y="14" width="20" height="10" rx="1"/>
+    <path class="ico-soft" d="M24 32h4M32 32h4M40 32h4M24 40h4M32 40h4M40 40h4M24 48h4M32 48h4"/>
+  `),34:d("pulse",`
+    <rect class="ico-soft" x="12" y="12" width="12" height="12"/>
+    <rect class="ico-soft" x="26" y="12" width="12" height="12"/>
+    <rect class="ico-fill ico-motion" x="40" y="12" width="12" height="12"/>
+    <rect class="ico-soft" x="12" y="26" width="12" height="12"/>
+    <rect class="ico-fill" x="26" y="26" width="12" height="12"/>
+    <rect class="ico-soft" x="40" y="26" width="12" height="12"/>
+    <rect class="ico-soft" x="12" y="40" width="12" height="12"/>
+    <rect class="ico-soft" x="26" y="40" width="12" height="12"/>
+    <rect class="ico-fill" x="40" y="40" width="12" height="12"/>
+  `),35:d("draw",`
+    <rect class="ico-stroke" x="12" y="14" width="40" height="36"/>
+    <path class="ico-stroke" d="M12 32h18M30 14v18"/>
+    <path class="ico-stroke ico-motion" d="M18 44c8-14 14-2 22-16"/>
+  `),36:d("pulse",`
+    <circle class="ico-stroke ico-motion" cx="28" cy="28" r="12"/>
+    <path class="ico-stroke" d="M36 36l14 14"/>
+    <path class="ico-soft" d="M22 28h12M28 22v12"/>
+  `),37:d("bob",`
+    <circle class="ico-stroke" cx="18" cy="40" r="7"/>
+    <circle class="ico-stroke ico-motion" cx="34" cy="28" r="7"/>
+    <circle class="ico-stroke" cx="50" cy="18" r="7"/>
+    <path class="ico-soft" d="M23 36l6-4M39 24l6-3"/>
+  `),38:d("pulse",`
+    <circle class="ico-stroke" cx="16" cy="42" r="5"/>
+    <circle class="ico-stroke" cx="32" cy="20" r="5"/>
+    <circle class="ico-fill ico-motion" cx="50" cy="36" r="5"/>
+    <path class="ico-stroke" d="M20 38l8-14M36 22l10 11"/>
+  `),39:d("draw",`
+    <rect class="ico-stroke" x="10" y="12" width="44" height="36" rx="2"/>
+    <path class="ico-stroke ico-motion" d="M16 38l8-10 7 5 12-14"/>
+  `),40:d("pulse",`
+    <circle class="ico-stroke" cx="24" cy="20" r="6"/>
+    <circle class="ico-stroke ico-motion" cx="42" cy="22" r="6"/>
+    <path class="ico-stroke" d="M10 48c2-10 8-14 14-14s12 4 14 14"/>
+    <path class="ico-stroke" d="M32 48c1-8 6-12 12-12s10 3 12 12"/>
+  `)},ge={1:{ru:"Повод в корзине",en:"Occasion in the basket",fr:"Occasion dans le panier",es:"Ocasión en la cesta"},2:{ru:"Ужин сегодня",en:"Dinner tonight",fr:"Dîner ce soir",es:"Cena de hoy"},3:{ru:"Именной вкладыш",en:"Named insert",fr:"Mot dans le coffret",es:"Nota con nombre"},4:{ru:"Календарь прикорма",en:"Feeding calendar",fr:"Calendrier de diversification",es:"Calendario de alimentación"},5:{ru:"Три быта",en:"Three households",fr:"Trois foyers",es:"Tres hogares"},6:{ru:"Ритуал на 14 дней",en:"14-day ritual",fr:"Rituel de 14 jours",es:"Ritual de 14 días"},7:{ru:"Первый холодный день",en:"First cold day",fr:"Premier jour froid",es:"Primer día frío"},8:{ru:"Курс как сериал",en:"Course as a series",fr:"Cure en série",es:"Curso en serie"},9:{ru:"Три шага ухода",en:"Three-step routine",fr:"Routine en trois gestes",es:"Rutina en tres pasos"},10:{ru:"Разговор о посадке",en:"A conversation about fit",fr:"Parler de la coupe",es:"Hablar del ajuste"},11:{ru:"Следующий размер",en:"Next size",fr:"Taille suivante",es:"Talla siguiente"},12:{ru:"Сцена, не характеристики",en:"A scene, not specs",fr:"Une scène, pas des specs",es:"Una escena, no fichas"},13:{ru:"Месяц обычными словами",en:"The month in plain words",fr:"Le mois en mots simples",es:"El mes en palabras llanas"},14:{ru:"Карта под крупный повод",en:"A card for a big occasion",fr:"Une carte pour une grande occasion",es:"Tarjeta para una gran ocasión"},15:{ru:"Копилка как сюжет",en:"Savings as a story",fr:"Une tirelire qui a une histoire",es:"Una hucha con historia"},16:{ru:"Год с полисом",en:"A year with the policy",fr:"Une année avec la police",es:"Un año con la póliza"},17:{ru:"Два издания недели",en:"Two editions of the week",fr:"Deux éditions de la semaine",es:"Dos ediciones de la semana"},18:{ru:"Три маршрута",en:"Three routes",fr:"Trois itinéraires",es:"Tres rutas"},19:{ru:"Один рейс, один повод",en:"One flight, one reason",fr:"Un vol, une raison",es:"Un vuelo, un motivo"},20:{ru:"Тест-драйв рядом с домом",en:"A test drive near home",fr:"Un essai près de chez soi",es:"Una prueba cerca de casa"},21:{ru:"Веха пробега",en:"A mileage milestone",fr:"Un palier de kilométrage",es:"Un hito de kilometraje"},22:{ru:"Одна планировка",en:"One floor plan",fr:"Un seul plan",es:"Un solo plano"},23:{ru:"Участок на выходные",en:"A plot for the weekend",fr:"Une parcelle pour le week-end",es:"Una parcela para el fin de semana"},24:{ru:"Ключ от аренды",en:"The rental key",fr:"La clé de la location",es:"La llave del alquiler"},25:{ru:"Доска комнаты",en:"A board of the room",fr:"La planche de la pièce",es:"El tablero de la habitación"},26:{ru:"Ремонт по календарю",en:"A renovation on a calendar",fr:"Des travaux au calendrier",es:"Una obra con calendario"},27:{ru:"Зеркало вакансии",en:"A mirror of the job post",fr:"Le miroir de l'offre",es:"El espejo de la vacante"},28:{ru:"Голос тренера",en:"The coach's voice",fr:"La voix de l'entraîneur",es:"La voz del entrenador"},29:{ru:"Афиша на четверг",en:"A bill for Thursday",fr:"L’affiche du jeudi",es:"La cartelera del jueves"},30:{ru:"Урок из вчерашней ошибки",en:"Yesterday's mistake as a lesson",fr:"La leçon de l'erreur d'hier",es:"La lección del error de ayer"},31:{ru:"Служебная записка",en:"An internal memo",fr:"Une note de service",es:"Una nota interna"},32:{ru:"Что это значит в понедельник",en:"What it means on Monday",fr:"Ce que cela change lundi",es:"Qué significa el lunes"},33:{ru:"Закрытие месяца",en:"Month close",fr:"La clôture du mois",es:"El cierre del mes"},34:{ru:"Карта навыков",en:"A skill map",fr:"Une carte des compétences",es:"Un mapa de habilidades"},35:{ru:"Обход этажа",en:"A walk through the floor",fr:"La visite de l'étage",es:"El recorrido de la planta"},36:{ru:"Поиск лучших клиентов",en:"Finding the best clients",fr:"Trouver les meilleurs clients",es:"Buscar a los mejores clientes"},37:{ru:"Денежный поток",en:"Cash flow",fr:"Le flux d'argent",es:"El flujo de dinero"},38:{ru:"Сеть дилеров",en:"A dealer network",fr:"Un réseau de revendeurs",es:"Una red de distribuidores"},39:{ru:"Сквозная аналитика",en:"End-to-end analytics",fr:"L’analytique de bout en bout",es:"Analítica de extremo a extremo"},40:{ru:"Сообщество",en:"Community",fr:"La communauté",es:"La comunidad"}};function W(e){return $[e]??$[1]}function fe(e,a){const n=ge[e];return n?n[a]||n.en:""}const Y={"mobile app":"мобильное приложение","b2b services":"professional services"};function J(e){return e.toLowerCase().replace(/&/g," ").replace(/[·,./]+/g," ").replace(/\s+/g," ").trim()}function Z(e){return(e.split("·").at(-1)??e).trim()}function ve(e,a){const n=J(e),o=J(Z(a));return n===o?!0:Y[n]===o||Y[o]===n}function O(e){return e.replace(/\*\*/g,"").replace(/\s+/g," ").trim()}function be(e,a){return e.length<=a?e:`${e.slice(0,a-1).trimEnd()}…`}function ee(e){return e.replace(/п\. ?п\./gi,"п\0п\0").replace(/p\. ?p\./gi,"p\0p\0").replace(/(мес|тыс|млн|руб|стр)\./gi,n=>n.replace(".","\0")).split(new RegExp("(?<=[.!])\\s+")).map(n=>n.replace(/\u0000/g,"."))}function ye(e){return ee(O(e))[0]??O(e)}function Ce(e,a){const n=e.search(/%|→|->|п\. ?п|x\d|×/i);if(n<0||e.length<=a)return e;const o=Math.max(0,n-Math.floor(a*.65));let s=e.slice(o,o+a).trim();return o>0&&(s=s.replace(/^\S*\s+/,"")),o+a<e.length&&(s=s.replace(/\s+\S*$/,"")),s.trim()}function we(e){const a=ee(O(e)).filter(Boolean),n=a.find(o=>/\d/.test(o)&&/%|п\. ?п|→|->|x\d|×/i.test(o))??a.find(o=>/\d/.test(o))??a[0]??"";return n.length>120?Ce(n,120):n}function ke(e){const a=new Map;for(const n of e.split(`
+`)){if(!n.startsWith("|"))continue;const o=n.split("|").slice(1,-1).map(t=>t.trim());if(o.length<5)continue;const s=Number(o[0]);!Number.isInteger(s)||s<=0||a.set(s,{category:o[1],kpi:o[3],strategy:o[4]})}return a}function D(e,a){for(const n of a){const o=e.match(new RegExp(`\\*\\*${n}\\s*:\\*\\*\\s*(.+)`,"i"));if(o)return o[1].trim()}return""}function Pe(e){const a=[],n=/(?:^|\n)\d+\)\s+\*\*([^*]+)\*\*\.?\s*([\s\S]*?)(?=\n\d+\)\s+\*\*|$)/g;for(const o of e.matchAll(n)){const s=o[1].replace(/\.+$/,"").trim(),t=o[2].replace(/^\.\s*/,"").trim();s&&t&&a.push({title:s,body:t})}return a}function R(e){const a=ke(e),n=e.split(/^## (?:Кейсы|Cases|Casos|Cas)\s*$/m)[1]??"",o=[];for(const s of n.split(/^### /m).slice(1)){const t=s.match(/^(\d+)\.\s+([^\n]+)/);if(!t)continue;const i=Number(t[1]),l=s.slice(t[0].length),p=D(l,["Категория","Category","Catégorie","Categoría"]),C=Pe(l),b=C.find(P=>/решени|solution|résultat|resultado/i.test(P.title)),y=C.find(P=>/проблема|problem|problème|problema/i.test(P.title)),f=a.get(i),L=!!(f&&ve(f.category,p));o.push({id:i,title:t[2].trim(),category:p,type:Z(p),profile:D(l,["Профиль","Profile","Profil","Perfil"]),period:D(l,["Период","Period","Période","Periodo"]),kpi:L&&f?f.kpi:b?we(b.body):"",strategy:L&&f?f.strategy:y?be(ye(y.body),160):"",sections:C})}return o}const k=R(ce);function I(e){if(e.length!==k.length)return k;const a=new Map(e.map(n=>[n.id,n]));return k.some(n=>!a.has(n.id))?k:k.map(n=>a.get(n.id))}const _={ru:k,en:I(R(de)),fr:I(R(ue)),es:I(R(pe))};function ae(e){return e.replace(/[&<>"]/g,a=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"})[a])}function qe(e){return ae(e.replace(/\s*\n\s*/g," ").trim()).replace(/\*\*([^*]+)\*\*/g,"<strong>$1</strong>")}const Le=/решени|solution|résultat|resultado/i,H=()=>window.matchMedia("(prefers-reduced-motion: reduce)").matches;function Me(e,a,n){const o=Number(e.dataset.caseId),s=e.querySelector(".case-card-kpi");if(!Number.isInteger(o)||!s||a.has(o)||n.has(o))return;const t=s.dataset.kpiFinal||s.textContent||"",i=he(t);if(!i||H()){a.add(o),s.textContent=t;return}const l=(n.get(o)??0)+1;n.set(o,l),s.textContent=`${t.slice(0,i.start)}${i.format(i.from)}${t.slice(i.end)}`;const p=performance.now(),C=b=>{if(n.get(o)!==l)return;const y=s.dataset.kpiFinal??t;if(y!==t){n.delete(o),a.add(o),s.textContent=y;return}const f=Math.min(1,(b-p)/700),L=1-(1-f)**3,P=i.from+(i.to-i.from)*L;if(s.textContent=`${t.slice(0,i.start)}${i.format(P)}${t.slice(i.end)}`,f<1){requestAnimationFrame(C);return}s.textContent=t,n.delete(o),a.add(o),s.classList.add("is-kpi-hot"),window.setTimeout(()=>s.classList.remove("is-kpi-hot"),420)};requestAnimationFrame(C)}function je(){const e=document.getElementById("caseCatalog");if(!e||k.length===0)return;const a=document.createElement("div");a.className="case-filters",a.setAttribute("role","toolbar");const n=document.createElement("button");n.type="button",n.className="case-filter is-active",n.dataset.caseFilter="",n.dataset.i18n="casesAll",n.textContent=q("casesAll",A()),n.setAttribute("aria-pressed","true"),a.append(n);const o=[...new Set(k.map(r=>r.type).filter(Boolean))];for(const r of o){const c=document.createElement("button");c.type="button",c.className="case-filter",c.dataset.caseFilter=r,c.textContent=r,c.setAttribute("aria-pressed","false"),a.append(c)}const s=document.createElement("div");s.className="case-carousel-wrap";const t=document.createElement("button");t.type="button",t.className="icon-btn case-nav",t.dataset.casePrev="",t.dataset.i18nTitle="casesPrev",t.innerHTML='<span aria-hidden="true">‹</span>';const i=document.createElement("button");i.type="button",i.className="icon-btn case-nav",i.dataset.caseNext="",i.dataset.i18nTitle="casesNext",i.innerHTML='<span aria-hidden="true">›</span>';const l=document.createElement("div");l.className="case-carousel",l.tabIndex=0,l.dataset.i18nTitle="casesCarousel";for(const r of k){const c=document.createElement("button");c.type="button",c.className="case-card",c.dataset.caseType=r.type,c.dataset.caseId=String(r.id);const g=document.createElement("span");g.className="case-card-kicker";const m=document.createElement("span");m.className="case-card-num",m.textContent=String(r.id);const h=document.createElement("span");h.className="case-card-type",g.append(m,h);const u=document.createElement("span");u.className="case-card-title";const v=document.createElement("span");v.className="case-scheme",v.setAttribute("aria-hidden","true"),v.innerHTML=W(r.id);const w=document.createElement("span");w.className="case-card-kpi";const M=document.createElement("span");M.className="case-card-strategy",c.append(g,u,v,w,M),l.append(c)}s.append(t,l,i);const p=document.createElement("dialog");p.className="case-dialog",p.innerHTML=`
     <div class="case-dialog-head">
       <div>
         <p class="case-dialog-meta" data-case-meta></p>
@@ -1829,4 +1948,4 @@ ${r}`),w=`mailto:kchistov@gmail.com?subject=${m}&body=${y}`;window.location.href
     <div class="case-scheme" data-case-scheme aria-hidden="true"></div>
     <p class="case-scheme-caption" data-case-scheme-caption></p>
     <div class="case-dialog-body" data-case-body></div>
-  `,e.append(a,s,m);const y=m.querySelector("[data-case-meta]"),w=m.querySelector("[data-case-title]"),L=m.querySelector("[data-case-profile]"),f=m.querySelector("[data-case-scheme]"),j=m.querySelector("[data-case-scheme-caption]"),P=m.querySelector("[data-case-body]");let x=null,E=null;const ae=new Set,H=new Map,S=t=>{const i=d.querySelector(".case-card:not(.is-filtered-out)"),u=i?i.getBoundingClientRect().width+12:300,p=window.matchMedia("(prefers-reduced-motion: reduce)").matches;d.scrollBy({left:t*u,behavior:p?"auto":"smooth"})},T=()=>{const t=d.scrollWidth-d.clientWidth;r.disabled=d.scrollLeft<=2,l.disabled=t<=2||d.scrollLeft>=t-2},G=t=>{t.classList.contains("is-leaving")&&(t.classList.add("is-filtered-out"),t.classList.remove("is-leaving"))},R=(t,i=!0)=>{a.querySelectorAll(".case-filter").forEach(c=>{const g=(c.dataset.caseFilter??"")===t;c.classList.toggle("is-active",g),c.setAttribute("aria-pressed",String(g))});const h=i&&!O();let u=0,p=0;d.querySelectorAll(".case-card").forEach(c=>{const g=!!t&&c.dataset.caseType!==t,v=c.classList.contains("is-filtered-out")||c.classList.contains("is-leaving");if(g&&c.classList.remove("is-live"),g&&!v){h&&u<6?(u+=1,c.classList.add("is-leaving"),c.addEventListener("animationend",q=>{q.animationName==="case-leave"&&G(c)}),window.setTimeout(()=>G(c),340)):(c.classList.add("is-filtered-out"),c.classList.remove("is-leaving","is-entering"));return}if(!g&&v){c.classList.remove("is-filtered-out","is-leaving"),h&&p<6&&(p+=1,c.classList.remove("is-entering"),c.style.animationDelay=`${(p-1)*45}ms`,c.offsetWidth,c.classList.add("is-entering"),c.addEventListener("animationend",()=>{c.classList.remove("is-entering"),c.style.animationDelay=""},{once:!0}));return}g||c.classList.remove("is-filtered-out","is-leaving")}),d.scrollLeft=0,T()},K=(t,i)=>{w.textContent=t.title,y.textContent=[t.category,t.period].filter(Boolean).join(" · "),L.textContent=t.profile;const h=_(t.id);f.dataset.kind!==h&&(f.dataset.kind=h,f.innerHTML=Q(t.id));const u=document.documentElement.getAttribute("data-lang")??A();j.textContent=C(fe(h),u),P.innerHTML=t.sections.map(p=>`<section><h3>${ee(p.title)}</h3><p>${Le(p.body)}</p></section>`).join(""),!(!i||O())&&P.querySelectorAll("section").forEach(p=>{const c=p.querySelector("h3");!c||!ke.test(c.textContent??"")||p.querySelectorAll("strong").forEach(g=>{/\d/.test(g.textContent??"")&&g.classList.add("is-metric")})})},N=t=>{const i=Y[t]??b,h=new Map(i.map(u=>[u.id,u]));if(a.querySelectorAll("[data-case-filter]").forEach(u=>{const p=u.dataset.caseFilter??"";if(!p)return;const c=b.findIndex(v=>v.type===p),g=c>=0?i[c]?.type:"";g&&(u.textContent=g)}),d.querySelectorAll(".case-card").forEach(u=>{const p=h.get(Number(u.dataset.caseId));if(!p)return;const c=u.querySelector(".case-card-type"),g=u.querySelector(".case-card-title"),v=u.querySelector(".case-card-kpi"),q=u.querySelector(".case-card-strategy");c&&(c.textContent=p.type),g&&(g.textContent=p.title),v&&(v.dataset.kpiFinal=p.kpi,H.has(p.id)||(v.textContent=p.kpi)),q&&(q.textContent=p.strategy,q.hidden=!p.strategy)}),m.open&&E!=null){const u=h.get(E);u&&K(u,!1)}};a.addEventListener("click",t=>{const i=t.target.closest("[data-case-filter]");i&&R(i.dataset.caseFilter??"")}),r.addEventListener("click",()=>S(-1)),l.addEventListener("click",()=>S(1)),d.addEventListener("scroll",T,{passive:!0}),d.addEventListener("keydown",t=>{t.key==="ArrowRight"?(t.preventDefault(),S(1)):t.key==="ArrowLeft"&&(t.preventDefault(),S(-1))}),window.addEventListener("resize",T);const V=(t,i)=>{const h=document.documentElement.getAttribute("data-lang")??A(),u=(Y[h]??b).find(v=>v.id===t),p=d.querySelector(`.case-card[data-case-id="${t}"]`);if(!u||!p)return;p.classList.contains("is-filtered-out")&&R("");const c=window.matchMedia("(prefers-reduced-motion: reduce)").matches,g=p.getBoundingClientRect().left-d.getBoundingClientRect().left+d.scrollLeft;d.scrollTo({left:Math.max(0,g-8),behavior:c?"auto":"smooth"}),E=u.id,K(u,!0),x=i,m.showModal()};d.addEventListener("click",t=>{const i=t.target.closest(".case-card");if(!i)return;const h=Number(i.dataset.caseId);Number.isInteger(h)&&V(h,i)}),document.addEventListener("click",t=>{const i=t.target.closest("[data-open-case]");if(!i)return;const h=Number(i.dataset.openCase);Number.isInteger(h)&&(t.preventDefault(),V(h,i))}),m.querySelector("[data-case-close]")?.addEventListener("click",()=>m.close()),m.addEventListener("click",t=>{t.target===m&&m.close()}),m.addEventListener("close",()=>{E=null,x?.focus(),x=null}),document.addEventListener("langchange",t=>{const i=t.detail;i&&N(i)});const ne=new IntersectionObserver(t=>{for(const i of t){const h=i.target,u=h.classList.contains("is-filtered-out")||h.classList.contains("is-leaving");if(!i.isIntersecting||u){h.classList.remove("is-live");continue}h.classList.add("is-live"),je(h,ae,H)}},{threshold:.6});d.querySelectorAll(".case-card").forEach(t=>ne.observe(t)),N(A()),R("",!1),requestAnimationFrame(T)}const Ee="(prefers-reduced-motion: reduce)";function Se(){const e=document.querySelector(".career");if(!e)return;const a=()=>e.classList.add("is-settled");if(window.matchMedia(Ee).matches){a();return}e.classList.add("is-armed");const n=new IntersectionObserver(o=>{o.some(s=>s.isIntersecting)&&(e.classList.add("is-played"),n.disconnect(),window.setTimeout(a,2300))},{threshold:.22});n.observe(e)}const Te="(prefers-reduced-motion: reduce)";function Ae(){const e=document.querySelector("#route");if(!e)return;if(window.matchMedia(Te).matches){e.classList.add("is-played");return}e.classList.add("is-armed");const a=new IntersectionObserver(n=>{n.some(o=>o.isIntersecting)&&(e.classList.add("is-played"),a.disconnect())},{threshold:.15});a.observe(e)}const J=document.getElementById("year");J&&(J.textContent=new Date().getFullYear().toString());function Me(){window.print()}oe(["theme","lang","pdf","tailor","contact"],"cv");["pdfButton","pdfButtonBottom"].forEach(e=>{const a=document.getElementById(e);a&&a.addEventListener("click",Me)});Be();Se();Ae();se();te();ie();
+  `,e.append(a,s,p);const C=p.querySelector("[data-case-meta]"),b=p.querySelector("[data-case-title]"),y=p.querySelector("[data-case-profile]"),f=p.querySelector("[data-case-scheme]"),L=p.querySelector("[data-case-scheme-caption]"),P=p.querySelector("[data-case-body]");let B=null,T=null;const ne=new Set,G=new Map,E=r=>{const c=l.querySelector(".case-card:not(.is-filtered-out)"),m=c?c.getBoundingClientRect().width+12:300,h=window.matchMedia("(prefers-reduced-motion: reduce)").matches;l.scrollBy({left:r*m,behavior:h?"auto":"smooth"})},S=()=>{const r=l.scrollWidth-l.clientWidth;t.disabled=l.scrollLeft<=2,i.disabled=r<=2||l.scrollLeft>=r-2},K=r=>{r.classList.contains("is-leaving")&&(r.classList.add("is-filtered-out"),r.classList.remove("is-leaving"))},U=(r,c=!0)=>{a.querySelectorAll(".case-filter").forEach(u=>{const v=(u.dataset.caseFilter??"")===r;u.classList.toggle("is-active",v),u.setAttribute("aria-pressed",String(v))});const g=c&&!H();let m=0,h=0;l.querySelectorAll(".case-card").forEach(u=>{const v=!!r&&u.dataset.caseType!==r,w=u.classList.contains("is-filtered-out")||u.classList.contains("is-leaving");if(v&&u.classList.remove("is-live"),v&&!w){g&&m<6?(m+=1,u.classList.add("is-leaving"),u.addEventListener("animationend",M=>{M.animationName==="case-leave"&&K(u)}),window.setTimeout(()=>K(u),340)):(u.classList.add("is-filtered-out"),u.classList.remove("is-leaving","is-entering"));return}if(!v&&w){u.classList.remove("is-filtered-out","is-leaving"),g&&h<6&&(h+=1,u.classList.remove("is-entering"),u.style.animationDelay=`${(h-1)*45}ms`,u.offsetWidth,u.classList.add("is-entering"),u.addEventListener("animationend",()=>{u.classList.remove("is-entering"),u.style.animationDelay=""},{once:!0}));return}v||u.classList.remove("is-filtered-out","is-leaving")}),l.scrollLeft=0,S()},N=(r,c)=>{b.textContent=r.title,C.textContent=[r.category,r.period].filter(Boolean).join(" · "),y.textContent=r.profile;const g=String(r.id);f.dataset.caseIcon!==g&&(f.dataset.caseIcon=g,f.innerHTML=W(r.id));const m=document.documentElement.getAttribute("data-lang")??A();L.textContent=fe(r.id,m),P.innerHTML=r.sections.map(h=>`<section><h3>${ae(h.title)}</h3><p>${qe(h.body)}</p></section>`).join(""),!(!c||H())&&P.querySelectorAll("section").forEach(h=>{const u=h.querySelector("h3");!u||!Le.test(u.textContent??"")||h.querySelectorAll("strong").forEach(v=>{/\d/.test(v.textContent??"")&&v.classList.add("is-metric")})})},V=r=>{const c=_[r]??k,g=new Map(c.map(m=>[m.id,m]));if(a.querySelectorAll("[data-case-filter]").forEach(m=>{const h=m.dataset.caseFilter??"";if(!h)return;const u=k.findIndex(w=>w.type===h),v=u>=0?c[u]?.type:"";v&&(m.textContent=v)}),l.querySelectorAll(".case-card").forEach(m=>{const h=g.get(Number(m.dataset.caseId));if(!h)return;const u=m.querySelector(".case-card-type"),v=m.querySelector(".case-card-title"),w=m.querySelector(".case-card-kpi"),M=m.querySelector(".case-card-strategy");u&&(u.textContent=h.type),v&&(v.textContent=h.title),w&&(w.dataset.kpiFinal=h.kpi,G.has(h.id)||(w.textContent=h.kpi)),M&&(M.textContent=h.strategy,M.hidden=!h.strategy)}),p.open&&T!=null){const m=g.get(T);m&&N(m,!1)}};a.addEventListener("click",r=>{const c=r.target.closest("[data-case-filter]");c&&U(c.dataset.caseFilter??"")}),t.addEventListener("click",()=>E(-1)),i.addEventListener("click",()=>E(1)),l.addEventListener("scroll",S,{passive:!0}),l.addEventListener("keydown",r=>{r.key==="ArrowRight"?(r.preventDefault(),E(1)):r.key==="ArrowLeft"&&(r.preventDefault(),E(-1))}),window.addEventListener("resize",S);const Q=(r,c)=>{const g=document.documentElement.getAttribute("data-lang")??A(),m=(_[g]??k).find(w=>w.id===r),h=l.querySelector(`.case-card[data-case-id="${r}"]`);if(!m||!h)return;h.classList.contains("is-filtered-out")&&U("");const u=window.matchMedia("(prefers-reduced-motion: reduce)").matches,v=h.getBoundingClientRect().left-l.getBoundingClientRect().left+l.scrollLeft;l.scrollTo({left:Math.max(0,v-8),behavior:u?"auto":"smooth"}),T=m.id,N(m,!0),B=c,p.showModal()};l.addEventListener("click",r=>{const c=r.target.closest(".case-card");if(!c)return;const g=Number(c.dataset.caseId);Number.isInteger(g)&&Q(g,c)}),document.addEventListener("click",r=>{const c=r.target.closest("[data-open-case]");if(!c)return;const g=Number(c.dataset.openCase);Number.isInteger(g)&&(r.preventDefault(),Q(g,c))}),p.querySelector("[data-case-close]")?.addEventListener("click",()=>p.close()),p.addEventListener("click",r=>{r.target===p&&p.close()}),p.addEventListener("close",()=>{T=null,B?.focus(),B=null}),document.addEventListener("langchange",r=>{const c=r.detail;c&&V(c)});const oe=new IntersectionObserver(r=>{for(const c of r){const g=c.target,m=g.classList.contains("is-filtered-out")||g.classList.contains("is-leaving");if(!c.isIntersecting||m){g.classList.remove("is-live");continue}g.classList.add("is-live"),Me(g,ne,G)}},{threshold:.6});l.querySelectorAll(".case-card").forEach(r=>oe.observe(r)),V(A()),U("",!1),requestAnimationFrame(S)}const Be="(prefers-reduced-motion: reduce)";function xe(e){const a=e.querySelector(".career-rail"),n=[...e.querySelectorAll(".career-dot")];if(!a||n.length<2)return;for(const b of n){const y=b.parentElement,f=y?.querySelector(".job-title");if(!y||!f)continue;const L=y.getBoundingClientRect(),P=f.getBoundingClientRect(),B=P.top+P.height/2-L.top;b.style.top=`${B-b.offsetHeight/2}px`}const o=e.getBoundingClientRect(),s=n[0].getBoundingClientRect(),t=n[n.length-1].getBoundingClientRect(),i=s.top+s.height/2-o.top,l=t.top+t.height/2-o.top,p=s.left+s.width/2-o.left,C=a.offsetWidth||4;a.style.left=`${p-C/2}px`,a.style.top=`${i}px`,a.style.height=`${Math.max(0,l-i)}px`,a.style.bottom="auto"}function Te(e){const a=e.querySelector(".career-train"),n=[...e.querySelectorAll(".job")];if(!a||n.length===0)return;const o=()=>{if(!e.classList.contains("is-played")){requestAnimationFrame(o);return}const s=Number.parseFloat(getComputedStyle(a).opacity),t=a.getBoundingClientRect(),i=t.top+t.height/2;if(s<.25){for(const b of n)b.classList.remove("is-hot","is-lit");requestAnimationFrame(o);return}let l=0,p=Number.POSITIVE_INFINITY;const C=n.map(b=>{const f=b.querySelector(".career-dot")?.getBoundingClientRect();return f?f.top+f.height/2:0});C.forEach((b,y)=>{const f=Math.abs(b-i);f<p&&(p=f,l=y)}),n.forEach((b,y)=>{b.classList.toggle("is-hot",y===l),b.classList.toggle("is-lit",i<C[y]-20&&y!==l)}),requestAnimationFrame(o)};requestAnimationFrame(o)}function Ee(){const e=document.querySelector(".career");if(!e)return;const a=()=>xe(e);if(a(),window.addEventListener("resize",a),document.addEventListener("langchange",()=>requestAnimationFrame(a)),window.matchMedia(Be).matches){e.classList.add("is-played");return}Te(e),e.classList.add("is-armed");const n=new IntersectionObserver(o=>{o.some(s=>s.isIntersecting)&&(e.classList.add("is-played"),n.disconnect())},{threshold:.18});n.observe(e)}const X=document.getElementById("year");X&&(X.textContent=new Date().getFullYear().toString());function Se(){window.print()}se(["theme","lang","pdf","tailor","contact"],"cv");["pdfButton","pdfButtonBottom"].forEach(e=>{const a=document.getElementById(e);a&&a.addEventListener("click",Se)});je();Ee();te();re();le();
