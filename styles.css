@@ -444,7 +444,149 @@ body.app {
 }
 
 /* Job section */
+.career {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  padding-left: 1.2rem;
+}
+
+.career-rail {
+  position: absolute;
+  left: 0;
+  top: 0.35rem;
+  bottom: 0.35rem;
+  width: 0.75rem;
+  pointer-events: none;
+}
+
+.career-line {
+  position: absolute;
+  left: 0.1rem;
+  top: 0.7rem;
+  bottom: 0;
+  width: 0.55rem;
+  transform-origin: bottom center;
+  background: linear-gradient(to top, #16a34a 0%, #22c55e 42%, #06b6d4 100%);
+  clip-path: polygon(38% 100%, 62% 100%, 100% 0, 0 0);
+}
+
+.career.is-armed .career-line {
+  transform: scaleY(0);
+}
+
+.career.is-played .career-line {
+  animation: career-draw 1.6s cubic-bezier(0.22, 0.7, 0.2, 1) forwards;
+}
+
+.career-now {
+  position: absolute;
+  top: 0;
+  left: 0.08rem;
+  width: 0.58rem;
+  height: 0.58rem;
+  border-radius: 50%;
+  background: #06b6d4;
+  opacity: 0.28;
+}
+
+.career-dot {
+  position: absolute;
+  z-index: 1;
+  left: -1.02rem;
+  top: 1.15rem;
+  width: 0.52rem;
+  height: 0.52rem;
+  border-radius: 50%;
+  background: var(--border-subtle);
+  box-shadow: 0 0 0 3px var(--bg-elevated);
+  pointer-events: none;
+}
+
+.career.is-played .career-dot {
+  animation: career-dot 0.45s ease forwards;
+  animation-delay: calc(var(--station) * 0.32s);
+}
+
+.career.is-played .job-dates {
+  animation: career-year 0.4s ease;
+  animation-delay: calc(var(--station) * 0.32s);
+}
+
+.career.is-played .job-title {
+  animation: career-role 0.4s ease;
+  animation-delay: calc(var(--station) * 0.32s + 0.12s);
+}
+
+.career.is-played .job-cases {
+  animation: career-chip 0.45s ease;
+  animation-delay: calc(var(--station) * 0.32s + 0.24s);
+}
+
+.career.is-played .career-now {
+  animation: career-now 0.55s ease forwards;
+  animation-delay: 1.6s;
+}
+
+.career.is-settled .career-line,
+.career.is-settled .career-dot,
+.career.is-settled .career-now,
+.career.is-settled .job-dates,
+.career.is-settled .job-title,
+.career.is-settled .job-cases {
+  animation: none;
+}
+
+.career.is-settled .career-line {
+  transform: scaleY(1);
+}
+
+.career.is-settled .career-dot {
+  background: #22c55e;
+  box-shadow: 0 0 0 3px var(--bg-elevated), 0 0 8px rgba(34, 197, 94, 0.65);
+}
+
+.career.is-settled .career-now {
+  opacity: 1;
+  background: #06b6d4;
+  box-shadow: 0 0 10px rgba(6, 182, 212, 0.75);
+}
+
+@keyframes career-draw {
+  from { transform: scaleY(0); }
+  to { transform: scaleY(1); }
+}
+
+@keyframes career-dot {
+  0% { background: var(--border-subtle); box-shadow: 0 0 0 3px var(--bg-elevated); }
+  55% { background: #22c55e; box-shadow: 0 0 0 3px var(--bg-elevated), 0 0 14px #22c55e; }
+  100% { background: #22c55e; box-shadow: 0 0 0 3px var(--bg-elevated), 0 0 8px rgba(34, 197, 94, 0.65); }
+}
+
+@keyframes career-year {
+  0%, 100% { color: var(--text-muted); }
+  45% { color: #22c55e; }
+}
+
+@keyframes career-role {
+  0%, 100% { color: var(--text-main); text-shadow: none; }
+  45% { color: #06b6d4; text-shadow: 0 0 12px rgba(6, 182, 212, 0.45); }
+}
+
+@keyframes career-chip {
+  0%, 100% { text-shadow: none; }
+  45% { text-shadow: 0 0 10px rgba(34, 197, 94, 0.9); }
+}
+
+@keyframes career-now {
+  0% { opacity: 0.28; transform: scale(0.7); box-shadow: none; }
+  40% { opacity: 1; transform: scale(1.4); box-shadow: 0 0 16px #06b6d4; }
+  100% { opacity: 1; transform: scale(1); box-shadow: 0 0 10px rgba(6, 182, 212, 0.75); }
+}
+
 .job {
+  position: relative;
   border-radius: var(--radius-md);
   border: 1px solid var(--border-subtle);
   padding: 0.85rem 0.95rem;
@@ -522,6 +664,181 @@ body.app {
 
 .job-list li + li {
   margin-top: 0.2rem;
+}
+
+.route-map {
+  position: relative;
+  max-width: 28rem;
+}
+
+.route {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.route-rail {
+  position: absolute;
+  left: calc(0.475rem - 2px);
+  top: 0.75rem;
+  bottom: 0.75rem;
+  width: 4px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #22d3ee 0%, #fbbf24 26%, #4ade80 52%, #a78bfa 76%, #fb7185 100%);
+  box-shadow: 0 0 14px color-mix(in srgb, #22d3ee 40%, transparent);
+}
+
+.route-rail::after {
+  content: "";
+  position: absolute;
+  left: -4px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 0 10px #fff, 0 0 16px #22d3ee;
+  opacity: 0;
+}
+
+#route.is-played .route-rail::after {
+  opacity: 1;
+  animation: route-train 6.5s linear infinite;
+}
+
+.route-stop {
+  position: relative;
+  padding-bottom: 1.15rem;
+}
+
+.route-stop:last-child {
+  padding-bottom: 0;
+}
+
+.route-dot {
+  position: absolute;
+  left: 0;
+  top: 0.28rem;
+  width: 0.95rem;
+  height: 0.95rem;
+  border-radius: 50%;
+  background: var(--stop);
+  box-shadow:
+    0 0 0 3px var(--bg-elevated),
+    0 0 0 5px color-mix(in srgb, var(--stop) 70%, transparent),
+    0 0 14px var(--stop);
+}
+
+#route.is-armed .route-dot {
+  opacity: 0;
+  transform: scale(0.35);
+}
+
+#route.is-played .route-dot {
+  animation: route-dot 0.45s cubic-bezier(0.2, 1.4, 0.4, 1) forwards;
+  animation-delay: calc(var(--i) * 0.18s);
+}
+
+.route-body {
+  padding-left: 1.75rem;
+}
+
+.route-years {
+  margin: 0;
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+}
+
+.route-name {
+  margin: 0.05rem 0 0;
+  font-size: 0.98rem;
+  color: var(--stop);
+}
+
+.route-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin: 0.4rem 0 0;
+}
+
+.route-fact {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.08rem 0.45rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--stop);
+  background: color-mix(in srgb, var(--stop) 16%, transparent);
+  border: 1px solid color-mix(in srgb, var(--stop) 55%, transparent);
+}
+
+#route.is-armed .route-fact {
+  opacity: 0;
+}
+
+#route.is-played .route-fact {
+  animation: route-fact 0.4s ease forwards;
+  animation-delay: calc(var(--i) * 0.18s + 0.08s);
+}
+
+#route.is-played .route-fact:nth-child(2) {
+  animation-delay: calc(var(--i) * 0.18s + 0.18s);
+}
+
+#route.is-played .route-fact:nth-child(3) {
+  animation-delay: calc(var(--i) * 0.18s + 0.28s);
+}
+
+.route-text {
+  margin: 0.4rem 0 0;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  color: var(--text-soft);
+}
+
+.route-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.15rem 0.7rem;
+  margin: 0.4rem 0 0;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.route-links a {
+  color: var(--stop);
+  text-decoration: none;
+}
+
+.route-links a:hover,
+.route-links a:focus-visible {
+  text-decoration: underline;
+}
+
+@keyframes route-train {
+  from { top: -4px; }
+  to { top: calc(100% - 8px); }
+}
+
+@keyframes route-dot {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes route-fact {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 /* Skills */
@@ -837,9 +1154,185 @@ body.app {
 }
 
 .case-card-kpi {
+  position: relative;
   font-size: 0.82rem;
   font-weight: 600;
   color: var(--accent);
+}
+
+.case-scheme {
+  display: block;
+  border-radius: 0.55rem;
+  background: color-mix(in srgb, var(--accent) 8%, transparent);
+  border: 1px solid color-mix(in srgb, var(--accent) 28%, var(--border-subtle));
+  padding: 0.15rem 0.35rem;
+  pointer-events: none;
+}
+
+.case-card .case-scheme svg,
+.case-dialog .case-scheme svg {
+  display: block;
+  width: 100%;
+  height: 46px;
+}
+
+.case-dialog .case-scheme {
+  margin-top: 0.85rem;
+}
+
+.case-dialog .case-scheme svg {
+  height: 72px;
+}
+
+.case-scheme-caption {
+  margin: 0.4rem 0 0;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.scheme-track,
+.scheme-arm {
+  fill: none;
+  stroke: color-mix(in srgb, var(--text-muted) 35%, var(--accent));
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.scheme-arm {
+  stroke: #22d3ee;
+  stroke-dasharray: 140;
+  stroke-dashoffset: 140;
+  animation: scheme-draw 0.8s ease forwards;
+}
+
+.scheme-guide {
+  stroke-dasharray: 4 7;
+  opacity: 0.75;
+}
+
+.scheme-node {
+  fill: var(--bg-elevated);
+  stroke: var(--accent);
+  stroke-width: 2;
+}
+
+.scheme-mid {
+  stroke: #4ade80;
+}
+
+.scheme-end {
+  stroke: #22d3ee;
+  fill: color-mix(in srgb, #22d3ee 22%, var(--bg-elevated));
+}
+
+.scheme-token {
+  fill: #fbbf24;
+}
+
+.scheme-beacon {
+  fill: none;
+  stroke: #fbbf24;
+  stroke-width: 1.5;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: scheme-ping 2.4s ease-out infinite;
+}
+
+.scheme-relay .scheme-token,
+.scheme-fan .scheme-token,
+.scheme-funnel .scheme-token,
+.scheme-branch .scheme-token,
+.scheme-loop .scheme-token {
+  animation: scheme-run 2.4s ease-in-out infinite;
+}
+
+.scheme-relay .scheme-token { offset-path: path("M22 32 H218"); }
+.scheme-fan .scheme-token { offset-path: path("M18 32 H92"); }
+.scheme-funnel .scheme-token { offset-path: path("M36 32 H196"); }
+.scheme-branch .scheme-token { offset-path: path("M20 40 H110"); }
+.scheme-loop .scheme-token {
+  offset-path: path("M120 16 H188 A16 16 0 0 1 204 32 A16 16 0 0 1 188 48 H52 A16 16 0 0 1 36 32 A16 16 0 0 1 52 16 H120");
+  animation-duration: 2.8s;
+  animation-timing-function: linear;
+}
+
+.scheme-pulse .scheme-token {
+  offset-path: path("M44 32 H196");
+  animation: scheme-shoot 2.4s ease-in infinite;
+}
+
+.case-scheme .scheme-token,
+.case-scheme .scheme-arm,
+.case-scheme .scheme-beacon {
+  animation-play-state: paused;
+}
+
+.case-card.is-live .scheme-token,
+.case-card.is-live .scheme-arm,
+.case-card.is-live .scheme-beacon,
+.case-dialog .case-scheme .scheme-token,
+.case-dialog .case-scheme .scheme-arm,
+.case-dialog .case-scheme .scheme-beacon {
+  animation-play-state: running;
+}
+
+@keyframes scheme-run {
+  from { offset-distance: 0%; }
+  to { offset-distance: 100%; }
+}
+
+@keyframes scheme-shoot {
+  0%, 30% { offset-distance: 0%; opacity: 0; }
+  38% { opacity: 1; }
+  80% { offset-distance: 100%; opacity: 1; }
+  100% { offset-distance: 100%; opacity: 0; }
+}
+
+@keyframes scheme-ping {
+  0% { transform: scale(0.7); opacity: 0.9; }
+  45% { transform: scale(1.7); opacity: 0; }
+  100% { transform: scale(1.7); opacity: 0; }
+}
+
+@keyframes scheme-draw {
+  to { stroke-dashoffset: 0; }
+}
+
+.case-card-kpi.is-kpi-hot::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 18%;
+  bottom: -0.14rem;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #22c55e, #06b6d4);
+  transform-origin: left center;
+  animation: kpi-strike 0.4s ease forwards;
+}
+
+.case-card.is-entering {
+  animation: case-enter 0.34s ease both;
+}
+
+.case-card.is-leaving {
+  animation: case-leave 0.28s ease forwards;
+}
+
+@keyframes kpi-strike {
+  0% { transform: scaleX(0); opacity: 1; }
+  70% { transform: scaleX(1); opacity: 1; }
+  100% { transform: scaleX(1); opacity: 0; }
+}
+
+@keyframes case-enter {
+  from { opacity: 0; transform: translateX(16px); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes case-leave {
+  to { opacity: 0; transform: translateX(-16px); }
 }
 
 .case-card-strategy {
@@ -905,6 +1398,18 @@ body.app {
   margin: 0;
   font-size: 0.9rem;
   line-height: 1.5;
+}
+
+.case-dialog-body strong.is-metric {
+  background-image: linear-gradient(90deg, #22c55e, #06b6d4);
+  background-repeat: no-repeat;
+  background-size: 0 2px;
+  background-position: 0 100%;
+  animation: metric-line 0.4s ease forwards;
+}
+
+@keyframes metric-line {
+  to { background-size: 100% 2px; }
 }
 
 /* Print */
@@ -1002,12 +1507,100 @@ body.app {
   }
 
   .case-card,
-  .case-card.is-filtered-out {
+  .case-card.is-filtered-out,
+  .case-card.is-leaving {
     display: flex !important;
     width: 100%;
     margin: 0 0 0.4rem;
     break-inside: avoid;
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
   }
 
+  .career-line {
+    transform: none !important;
+    animation: none !important;
+    background: #52525b !important;
+  }
+
+  .career-dot,
+  .career-now,
+  .job-dates,
+  .job-title,
+  .job-cases,
+  .route-dot,
+  .route-fact,
+  .route-rail::after,
+  .scheme-token,
+  .scheme-arm,
+  .scheme-beacon,
+  .case-card-kpi::after,
+  .case-dialog-body strong.is-metric {
+    animation: none !important;
+    text-shadow: none !important;
+  }
+
+  .route-dot,
+  .route-fact {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .route-rail::after,
+  .case-scheme,
+  .case-scheme-caption {
+    display: none !important;
+  }
+
+  .career-dot,
+  .career-now {
+    opacity: 1 !important;
+  }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .career-line,
+  .career-dot,
+  .career-now,
+  .job-dates,
+  .job-title,
+  .job-cases,
+  .case-card,
+  .case-card-kpi::after,
+  .case-dialog-body strong.is-metric,
+  .route-dot,
+  .route-fact,
+  .route-rail::after,
+  .scheme-token,
+  .scheme-arm,
+  .scheme-beacon {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .route-dot,
+  .route-fact {
+    opacity: 1;
+    transform: none;
+  }
+
+  .route-rail::after {
+    display: none;
+  }
+
+  .scheme-arm {
+    stroke-dashoffset: 0;
+  }
+
+  .scheme-token {
+    offset-distance: 62%;
+    opacity: 1;
+  }
+
+  .career-line {
+    transform: none;
+  }
 }
 
